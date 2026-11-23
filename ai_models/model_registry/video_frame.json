@@ -1,0 +1,134 @@
+{
+  "module": "video",
+  "name": "video_frame_swin_ffpp",
+  "version": "1.0.0",
+  "status": "experimental",
+  "algorithm": "YuNet face detection + Swin-Tiny frame classifier (third-party, fine-tuned on FaceForensics++) + aggregation of frame scores",
+  "model_id": "hchcsuim/FFPP-Raw_1FPS_faces-expand-40-aligned_val-ds-celeb-df",
+  "revision": "41921375ab59212cf5757c1a5820bbf34868e019",
+  "created_at": "2026-11-21T10:08:57.815003+00:00",
+  "metrics": {
+    "model": "hchcsuim/FFPP-Raw_1FPS_faces-expand-40-aligned_val-ds-celeb-df",
+    "revision": "41921375ab59212cf5757c1a5820bbf34868e019",
+    "frames_per_video": 16,
+    "created_at": "2026-11-21T10:08:57.815003+00:00",
+    "seed": 42,
+    "face_crop_margin": 0.4,
+    "aggregator": "median",
+    "calibration_auc_by_aggregator": {
+      "mean": 0.8947,
+      "median": 0.9065,
+      "top_quartile_mean": 0.8921,
+      "flagged_share": 0.8658
+    },
+    "calibration": {
+      "fake_min": 0.9616,
+      "real_max": 0.7969,
+      "target_precision": 0.9,
+      "chosen_on_videos": 120
+    },
+    "sets": {
+      "calibration": "Celeb-DF v2, 60 real + 60 fake, not on the official test list",
+      "test": "Celeb-DF v2 official test list, seeded sample of 24 real + 24 fake (model was chosen while looking at part of this sample)",
+      "fresh": "Google DeepFakeDetection (angads24/deepfake-video), seeded sample of 20 real + 20 fake"
+    },
+    "results": {
+      "calibration": {
+        "videos_read": 120,
+        "videos_used": 120,
+        "videos_unusable": 0,
+        "n_fake": 60,
+        "n_real": 60,
+        "face_frames": 1919,
+        "frame_auc": 0.8311,
+        "video_auc": 0.9065,
+        "video_auc_ci95": [
+          0.848,
+          0.956
+        ],
+        "video_auc_by_aggregator": {
+          "mean": 0.8947,
+          "median": 0.9065,
+          "top_quartile_mean": 0.8921,
+          "flagged_share": 0.8658
+        },
+        "single_frame_auc": 0.8619,
+        "constant_answer_accuracy": 0.5,
+        "decision_rule": {
+          "n": 120,
+          "decided": 98,
+          "decided_share": 0.8167,
+          "accuracy_on_decided": 0.9082,
+          "fake_calls": 52,
+          "fake_calls_correct": 47,
+          "real_calls": 46,
+          "real_calls_correct": 42
+        }
+      },
+      "test": {
+        "videos_read": 48,
+        "videos_used": 48,
+        "videos_unusable": 0,
+        "n_fake": 24,
+        "n_real": 24,
+        "face_frames": 768,
+        "frame_auc": 0.8825,
+        "video_auc": 0.9332,
+        "video_auc_ci95": [
+          0.844,
+          0.995
+        ],
+        "video_auc_by_aggregator": {
+          "mean": 0.9444,
+          "median": 0.9332,
+          "top_quartile_mean": 0.9375,
+          "flagged_share": 0.9384
+        },
+        "single_frame_auc": 0.9306,
+        "constant_answer_accuracy": 0.5,
+        "decision_rule": {
+          "n": 48,
+          "decided": 42,
+          "decided_share": 0.875,
+          "accuracy_on_decided": 0.9286,
+          "fake_calls": 22,
+          "fake_calls_correct": 19,
+          "real_calls": 20,
+          "real_calls_correct": 20
+        }
+      },
+      "fresh": {
+        "videos_read": 40,
+        "videos_used": 40,
+        "videos_unusable": 0,
+        "n_fake": 20,
+        "n_real": 20,
+        "face_frames": 614,
+        "frame_auc": 0.7951,
+        "video_auc": 0.8425,
+        "video_auc_ci95": [
+          0.706,
+          0.947
+        ],
+        "video_auc_by_aggregator": {
+          "mean": 0.8475,
+          "median": 0.8425,
+          "top_quartile_mean": 0.8525,
+          "flagged_share": 0.7825
+        },
+        "single_frame_auc": 0.7388,
+        "constant_answer_accuracy": 0.5,
+        "decision_rule": {
+          "n": 40,
+          "decided": 31,
+          "decided_share": 0.775,
+          "accuracy_on_decided": 0.8065,
+          "fake_calls": 15,
+          "fake_calls_correct": 13,
+          "real_calls": 16,
+          "real_calls_correct": 12
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+# Build from the project root:  docker build -f deployment/docker/backend.Dockerfile -t dfnd-backend .
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
+WORKDIR /app
+
+COPY backend/requirements.txt backend/requirements-ml.txt backend/
+RUN pip install -r backend/requirements.txt
+# Optional: the evidence, image-text and video modules need torch, transformers and OpenCV (about 2 GB more).
+# Build with  --build-arg INSTALL_ML=true  (docker compose reads INSTALL_ML from .env). Not built or run in this project.
+ARG INSTALL_ML=false
+RUN if [ "$INSTALL_ML" = "true" ]; then \
+      pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -r backend/requirements-ml.txt; \
+    fi
+
+# Same folder layout as the repository: the application finds ai_models/, datasets/ and storage/ relative to it.
+COPY backend backend
+COPY ai_models ai_models
+COPY datasets/manifests datasets/manifests
+
+RUN useradd --create-home --uid 10001 app && mkdir -p storage && chown -R app:app /app
+USER app
+WORKDIR /app/backend
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health', timeout=4)"
+
+# Apply database migrations, then serve.
+CMD ["sh", "-c", "python -m app.db.migrate && uvicorn app.main:app --host 0.0.0.0 --port 8000"]

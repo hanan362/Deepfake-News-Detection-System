@@ -1,0 +1,6 @@
+# Optional machine-learning packages. Without them the text, image and URL modules work as usual; the evidence module
+# cannot judge stance, and the multimodal and video modules report themselves as unavailable.
+# CPU-only PyTorch is enough:  pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+transformers>=4.40
+opencv-python-headless>=4.9

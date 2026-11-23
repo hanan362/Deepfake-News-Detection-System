@@ -1,0 +1,55 @@
+{
+  "module": "text_ur",
+  "name": "text_baseline_ur",
+  "version": "1.0.0",
+  "status": "experimental",
+  "artifact": "ai_models/checkpoints/text_baseline_ur/model.joblib",
+  "language": "ur",
+  "algorithm": "TF-IDF (character 2-5 grams) + Logistic Regression",
+  "trained_at": "2026-11-22T10:00:14+00:00",
+  "dataset": {
+    "name": "urdu_fake_news",
+    "version": "hf-parquet",
+    "rows_clean": {
+      "train": 634,
+      "test": 260
+    },
+    "fake_share": 0.4527
+  },
+  "metrics": {
+    "test": {
+      "accuracy": 0.8615,
+      "precision_fake": 0.9419,
+      "recall_fake": 0.7232,
+      "f1_fake": 0.8182,
+      "roc_auc": 0.9113,
+      "pr_auc": 0.9134,
+      "confusion_matrix": {
+        "tn": 143,
+        "fp": 5,
+        "fn": 31,
+        "tp": 81
+      },
+      "n": 260,
+      "accuracy_ci95": [
+        0.8191,
+        0.9038
+      ],
+      "roc_auc_ci95": [
+        0.8729,
+        0.944
+      ]
+    },
+    "group_cv_roc_auc": 0.8922,
+    "calibration": {
+      "ece_test": 0.0875
+    },
+    "baselines": {
+      "majority_accuracy": 0.5692,
+      "length_only": {
+        "accuracy": 0.5615,
+        "roc_auc": 0.5968
+      }
+    }
+  }
+}

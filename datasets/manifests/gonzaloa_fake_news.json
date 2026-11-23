@@ -1,0 +1,46 @@
+{
+  "name": "gonzaloa_fake_news",
+  "version": "hf-main",
+  "language": "en",
+  "created_at": "2026-11-22T09:34:01+00:00",
+  "source": "https://huggingface.co/datasets/GonzaloA/fake_news",
+  "license": "License not stated on the dataset card; used for academic research only",
+  "notes": "A mix of Kaggle fake-news collections; the card does not document sources or annotation. Label 1 (real) was verified empirically against the wire-agency tag rate. Source artefacts such as '(Reuters)' datelines are removed before training, but other source-style shortcuts may remain.",
+  "file_sha256": {
+    "train": "13f6fccc352958149aa1c752f2ad8acd054d5331092c322fb0b0e7b9e53b29d3",
+    "validation": "ebb16798a2dee69558495c3641a68cdab738dd190e464ae50d288b5013c5e84a",
+    "test": "1f34a71018d51feda81fc657432c3287c3b09af6b5a3b1b67a945938d1a57999"
+  },
+  "rows_raw": {
+    "train": 24353,
+    "validation": 8117,
+    "test": 8117
+  },
+  "reuters_tag_rate_by_label": {
+    "0": 0.0004481089801039613,
+    "1": 0.9593027661993179
+  },
+  "rows_clean": {
+    "train": 24261,
+    "validation": 8083,
+    "test": 8084
+  },
+  "label_distribution_fake_share": {
+    "train": 0.4566,
+    "validation": 0.4566,
+    "test": 0.4644
+  },
+  "removed": {
+    "empty_or_short": 156,
+    "duplicates_or_cross_split_leak": 3
+  },
+  "external_test_set": {
+    "name": "liar2_test",
+    "source": "https://huggingface.co/datasets/chengxuphd/liar2",
+    "license": "apache-2.0",
+    "file_sha256": "93f31acb6795221f36d8e8050e9926b119b88464cad6f287e2269e77b33b1322",
+    "rows": 2296,
+    "fake_share": 0.5762,
+    "median_tokens": 16.0
+  }
+}

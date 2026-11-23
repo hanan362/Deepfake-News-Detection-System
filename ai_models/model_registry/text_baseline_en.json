@@ -1,0 +1,63 @@
+{
+  "module": "text",
+  "name": "text_baseline_en",
+  "version": "1.0.0",
+  "status": "trained_baseline",
+  "artifact": "ai_models/checkpoints/text_baseline_en/model.joblib",
+  "language": "en",
+  "algorithm": "TF-IDF (1-2 grams) + Logistic Regression",
+  "trained_at": "2026-11-22T09:34:01+00:00",
+  "dataset": {
+    "name": "gonzaloa_fake_news",
+    "version": "hf-main",
+    "rows_clean": {
+      "train": 24261,
+      "validation": 8083,
+      "test": 8084
+    },
+    "fake_share": {
+      "train": 0.4566,
+      "validation": 0.4566,
+      "test": 0.4644
+    }
+  },
+  "metrics": {
+    "test": {
+      "accuracy": 0.9735,
+      "precision_fake": 0.968,
+      "recall_fake": 0.9752,
+      "f1_fake": 0.9716,
+      "roc_auc": 0.9954,
+      "pr_auc": 0.9943,
+      "confusion_matrix": {
+        "tn": 4209,
+        "fp": 121,
+        "fn": 93,
+        "tp": 3661
+      },
+      "n": 8084
+    },
+    "external_liar2": {
+      "accuracy": 0.5527,
+      "precision_fake": 0.595,
+      "recall_fake": 0.7007,
+      "f1_fake": 0.6435,
+      "roc_auc": 0.5485,
+      "pr_auc": 0.6195,
+      "confusion_matrix": {
+        "tn": 342,
+        "fp": 631,
+        "fn": 396,
+        "tp": 927
+      },
+      "n": 2296
+    },
+    "calibration": {
+      "ece_validation": 0.0326,
+      "ece_test": 0.0301,
+      "ece_external_liar2": 0.1266,
+      "brier_test": 0.0223,
+      "brier_external_liar2": 0.2649
+    }
+  }
+}

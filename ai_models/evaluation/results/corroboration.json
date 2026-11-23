@@ -1,0 +1,6285 @@
+{
+ "generated_at": "2026-11-23T05:55:40+00:00",
+ "nli_model": "cross-encoder/nli-deberta-v3-small",
+ "nli_revision": "fa2804872c3b4bd748f38c0185cc85775361e735",
+ "directory_version": "1.0",
+ "directory_entries": 51,
+ "rules": {
+  "compares": "headlines only, not article text",
+  "corroborated": "a listed outlet's headline shares at least 50% of the headline's content words and the inference model is at least 60% sure it says the same",
+  "disputed": "no outlet corroborates, and a listed outlet's headline shares at least 70% of the content words while the model is at least 80% sure it says the opposite",
+  "not_found": "anything else; this says nothing against the headline",
+  "related": "when nothing matches, headlines of listed outlets that share at least 30% of the content words are listed as related coverage; they are for the reader to look at and never change the verdict"
+ },
+ "thresholds": {
+  "support_overlap": 0.5,
+  "support_entailment": 0.6,
+  "contradict_overlap": 0.7,
+  "contradict_probability": 0.8
+ },
+ "limits": "Only the headline is compared, not the article. Only outlets named in the project's small hand-made directory count; an outlet that is not listed is ignored, and a story that no listed outlet has run (local news, very new news, or old news, which this search rarely returns) comes out as Not found, which says nothing against it. A headline that was copied from a real outlet with a changed article body would still be corroborated. The headline is sent to Google News search (an unofficial feed).",
+ "sets": {
+  "current": {
+   "description": "Headlines read from outlet feeds on 22-23 Nov 2026, distorted copies of them, and invented headlines. The thresholds were chosen from a small grid on this set.",
+   "headlines": 76,
+   "search_failed_at_collection": 0,
+   "kinds": {
+    "authentic": {
+     "n": 42,
+     "corroborated": 32,
+     "disputed": 0,
+     "not_found": 10,
+     "unavailable": 0,
+     "corroborated_rate": 0.762,
+     "corroborated_95ci": [
+      0.615,
+      0.865
+     ],
+     "disputed_rate": 0.0,
+     "with_any_search_result": 42,
+     "not_found_with_related_coverage": 9
+    },
+    "authentic (own outlet excluded)": {
+     "n": 42,
+     "corroborated": 5,
+     "disputed": 0,
+     "not_found": 37,
+     "unavailable": 0,
+     "corroborated_rate": 0.119,
+     "corroborated_95ci": [
+      0.052,
+      0.25
+     ],
+     "disputed_rate": 0.0,
+     "with_any_search_result": 42,
+     "not_found_with_related_coverage": 19
+    },
+    "distorted": {
+     "n": 14,
+     "corroborated": 0,
+     "disputed": 8,
+     "not_found": 6,
+     "unavailable": 0,
+     "corroborated_rate": 0.0,
+     "corroborated_95ci": [
+      0.0,
+      0.215
+     ],
+     "disputed_rate": 0.571,
+     "with_any_search_result": 12,
+     "not_found_with_related_coverage": 4
+    },
+    "invented": {
+     "n": 20,
+     "corroborated": 0,
+     "disputed": 0,
+     "not_found": 20,
+     "unavailable": 0,
+     "corroborated_rate": 0.0,
+     "corroborated_95ci": [
+      0.0,
+      0.161
+     ],
+     "disputed_rate": 0.0,
+     "with_any_search_result": 16,
+     "not_found_with_related_coverage": 3
+    }
+   },
+   "items": [
+    {
+     "id": "R00",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Focus on public issues, avoid new fault lines: PPP",
+     "status": "corroborated",
+     "results_read": 10,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "R00",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Focus on public issues, avoid new fault lines: PPP",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R01",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Veteran journalist Husain Naqi passes away in Lahore",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "R01",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Veteran journalist Husain Naqi passes away in Lahore",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "The Express Tribune"
+     ]
+    },
+    {
+     "id": "R02",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Trump intends to secure ‘permanent deal’ with Iran",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "CBS News"
+     ],
+     "related": []
+    },
+    {
+     "id": "R02",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Trump intends to secure ‘permanent deal’ with Iran",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "CBS News"
+     ],
+     "related": []
+    },
+    {
+     "id": "R03",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "SMOKERS’ CORNER: The Migration Paradox",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "Dawn"
+     ]
+    },
+    {
+     "id": "R03",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "SMOKERS’ CORNER: The Migration Paradox",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R04",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "PPP, PML-N spat continues as Asif's jibe at Bilawal draws 'red line' warning",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 12,
+     "outlets": [],
+     "related": [
+      "Dawn"
+     ]
+    },
+    {
+     "id": "R04",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "PPP, PML-N spat continues as Asif's jibe at Bilawal draws 'red line' warning",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R05",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Mutiple roads closed for traffic in Karachi ahead of demonstration, rally by political parties",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 12,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "R05",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Mutiple roads closed for traffic in Karachi ahead of demonstration, rally by political parties",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "Geo News"
+     ]
+    },
+    {
+     "id": "R06",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "ANC fights to keep control of South Africa's key cities after election setback",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "R06",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "ANC fights to keep control of South Africa's key cities after election setback",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R07",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Trump threatens ban on US firms building AI data centres overseas",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "R07",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Trump threatens ban on US firms building AI data centres overseas",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R08",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Three killed and dozens missing after fire at Indonesian factory",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "R08",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Three killed and dozens missing after fire at Indonesian factory",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R09",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "French police officers sentenced for beating of music producer Michel Zecler",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "R09",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "French police officers sentenced for beating of music producer Michel Zecler",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [],
+     "related": [
+      "The Guardian",
+      "CNN",
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "R10",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "US declassifies more UFO footage filmed in the Middle East",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 10,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "R10",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "US declassifies more UFO footage filmed in the Middle East",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R11",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Russia-bound ship still on fire after attack in Gulf of Finland",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": [
+      "BBC",
+      "Al Jazeera",
+      "France 24"
+     ]
+    },
+    {
+     "id": "R11",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Russia-bound ship still on fire after attack in Gulf of Finland",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Al Jazeera",
+      "France 24"
+     ]
+    },
+    {
+     "id": "R12",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "What Sandpapergate reveals about Australian cricket",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Financial Times",
+      "The New York Times"
+     ]
+    },
+    {
+     "id": "R12",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "What Sandpapergate reveals about Australian cricket",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Financial Times",
+      "The New York Times"
+     ]
+    },
+    {
+     "id": "R13",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Photos: People rally across France over living costs, public services",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "R13",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Photos: People rally across France over living costs, public services",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Deutsche Welle",
+      "The Guardian"
+     ]
+    },
+    {
+     "id": "R14",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Russian ship attacked by drone in Baltic Sea off Finland",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Reuters",
+      "Al Jazeera",
+      "Bloomberg"
+     ]
+    },
+    {
+     "id": "R14",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Russian ship attacked by drone in Baltic Sea off Finland",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Reuters",
+      "Bloomberg"
+     ]
+    },
+    {
+     "id": "R15",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Messi throws ball in opponent’s face, avoids red card as Inter Miami lose",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "R15",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Messi throws ball in opponent’s face, avoids red card as Inter Miami lose",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "The Indian Express"
+     ]
+    },
+    {
+     "id": "R16",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Why Somalia’s president turned against his former ally, the UAE",
+     "status": "corroborated",
+     "results_read": 11,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "R16",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Why Somalia’s president turned against his former ally, the UAE",
+     "status": "not_found",
+     "results_read": 11,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R17",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "COP31 climate talks on the brink as new draft deal faces scrutiny",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "R17",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "COP31 climate talks on the brink as new draft deal faces scrutiny",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R18",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Taiwanese Comedian Targeted for Mocking Xi Jinping Is Drawing Sellout Crowds",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R18",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Taiwanese Comedian Targeted for Mocking Xi Jinping Is Drawing Sellout Crowds",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R19",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "A Chinese Tech Hub Offers a Peek at the Electric Cars Headed for Canada",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "R19",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "A Chinese Tech Hub Offers a Peek at the Electric Cars Headed for Canada",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R20",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Deadly Protests Erupt in Bangladesh Over Exiled Former Leader. What to Know.",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "R20",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Deadly Protests Erupt in Bangladesh Over Exiled Former Leader. What to Know.",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [],
+     "related": [
+      "BBC",
+      "Al Jazeera",
+      "Deutsche Welle"
+     ]
+    },
+    {
+     "id": "R21",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "U.S. Auctions 31.5 Million Acres of Pacific Ocean to Deep Sea Mining Company",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "R21",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "U.S. Auctions 31.5 Million Acres of Pacific Ocean to Deep Sea Mining Company",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "The Guardian",
+      "The Wall Street Journal"
+     ]
+    },
+    {
+     "id": "R22",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Wreck of First Australian-Built Warship Is Revealed 128 Years After It Sank",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "The New York Times",
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "R22",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Wreck of First Australian-Built Warship Is Revealed 128 Years After It Sank",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "R23",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "South Korea’s Education Minister Resigns Over Anti-A.I. Cheating Rules",
+     "status": "corroborated",
+     "results_read": 11,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "The New York Times",
+      "South China Morning Post"
+     ],
+     "related": []
+    },
+    {
+     "id": "R23",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "South Korea’s Education Minister Resigns Over Anti-A.I. Cheating Rules",
+     "status": "corroborated",
+     "results_read": 11,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "South China Morning Post"
+     ],
+     "related": []
+    },
+    {
+     "id": "R24",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Closer EU ties will give UK say on Brussels decisions, says Ed Miliband",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "R24",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Closer EU ties will give UK say on Brussels decisions, says Ed Miliband",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "The Telegraph"
+     ]
+    },
+    {
+     "id": "R25",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Haitians excited but uneasy as El Salvador troops fight gangs",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "R25",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Haitians excited but uneasy as El Salvador troops fight gangs",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "Los Angeles Times",
+      "Associated Press"
+     ]
+    },
+    {
+     "id": "R26",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day of trading",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "R26",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day of trading",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R27",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Conservative media weighs its future as cracks emerge in Trump’s movement",
+     "status": "corroborated",
+     "results_read": 5,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "R27",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Conservative media weighs its future as cracks emerge in Trump’s movement",
+     "status": "not_found",
+     "results_read": 5,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R28",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Arizona grandfather hailed as a hero after finding missing toddler in desert",
+     "status": "corroborated",
+     "results_read": 2,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "R28",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Arizona grandfather hailed as a hero after finding missing toddler in desert",
+     "status": "not_found",
+     "results_read": 2,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R29",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Theresa May ‘aghast’ at Andy Burnham’s talk about rejoining EU",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "R29",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Theresa May ‘aghast’ at Andy Burnham’s talk about rejoining EU",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "BBC",
+      "The News International"
+     ]
+    },
+    {
+     "id": "R30",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "The convenient politics of an AI spy scandal",
+     "status": "corroborated",
+     "results_read": 8,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "The Express Tribune"
+     ],
+     "related": []
+    },
+    {
+     "id": "R30",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "The convenient politics of an AI spy scandal",
+     "status": "not_found",
+     "results_read": 8,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "BBC"
+     ]
+    },
+    {
+     "id": "R31",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Rahul Gandhi, Indian opposition lawmakers detained over election chief protest for second day",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "R31",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Rahul Gandhi, Indian opposition lawmakers detained over election chief protest for second day",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "R32",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Bangladesh ex-PM loses right to appeal",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": [
+      "Reuters",
+      "Al Jazeera",
+      "BBC"
+     ]
+    },
+    {
+     "id": "R32",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Bangladesh ex-PM loses right to appeal",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": [
+      "Reuters",
+      "Al Jazeera",
+      "BBC"
+     ]
+    },
+    {
+     "id": "R33",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Dar, Saudi FM discuss possible R4 meeting on regional developments",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "The Express Tribune"
+     ],
+     "related": []
+    },
+    {
+     "id": "R33",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Dar, Saudi FM discuss possible R4 meeting on regional developments",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "Business Recorder",
+      "Dawn"
+     ]
+    },
+    {
+     "id": "R34",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Govt moves to fully digitise passport issuance system",
+     "status": "not_found",
+     "results_read": 3,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "The Express Tribune"
+     ]
+    },
+    {
+     "id": "R34",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Govt moves to fully digitise passport issuance system",
+     "status": "not_found",
+     "results_read": 3,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R35",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Saudi-led coalition says it intercepted, destroyed Houthi drone targeting Riyadh region",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "Al Jazeera",
+      "France 24",
+      "Reuters"
+     ]
+    },
+    {
+     "id": "R35",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Saudi-led coalition says it intercepted, destroyed Houthi drone targeting Riyadh region",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "Al Jazeera",
+      "France 24",
+      "Reuters"
+     ]
+    },
+    {
+     "id": "R36",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Saudi-led coalition says it intercepted Houthi missile in western region",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "R36",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Saudi-led coalition says it intercepted Houthi missile in western region",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R37",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "European Union proposes tax on Big Tech to boost budget",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "R37",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "European Union proposes tax on Big Tech to boost budget",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "Agence France-Presse",
+      "Dawn"
+     ]
+    },
+    {
+     "id": "R38",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "NIA sends request to UAE to probe any Indian footprints of copilot of flydubai flight who attacked Smit Machchhar",
+     "status": "corroborated",
+     "results_read": 7,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "R38",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "NIA sends request to UAE to probe any Indian footprints of copilot of flydubai flight who attacked Smit Machchhar",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R39",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "COP31: Turkiye's final draft doesn't mention the words ‘fossil fuels’ that cause global warming",
+     "status": "corroborated",
+     "results_read": 8,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "R39",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "COP31: Turkiye's final draft doesn't mention the words ‘fossil fuels’ that cause global warming",
+     "status": "not_found",
+     "results_read": 8,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "R40",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Thousands march in Lisbon as living costs fuel anger",
+     "status": "corroborated",
+     "results_read": 4,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Reuters",
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "R40",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Thousands march in Lisbon as living costs fuel anger",
+     "status": "corroborated",
+     "results_read": 4,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "R41",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Israeli strike kills three in vehicle distributing aid in Gaza, witnesses say",
+     "status": "not_found",
+     "results_read": 11,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "Reuters"
+     ]
+    },
+    {
+     "id": "R41",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Israeli strike kills three in vehicle distributing aid in Gaza, witnesses say",
+     "status": "not_found",
+     "results_read": 11,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "Reuters"
+     ]
+    },
+    {
+     "id": "D00",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Veteran journalist Husain Naqi passes away in Karachi",
+     "status": "disputed",
+     "results_read": 10,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "D01",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Trump intends to secure ‘permanent deal’ with Iraq",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "D02",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Mutiple roads closed for traffic in Lahore ahead of demonstration, rally by political parties",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 10,
+     "outlets": [],
+     "related": [
+      "Dawn"
+     ]
+    },
+    {
+     "id": "D03",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "ANC fights to keep control of Nigeria's key cities after election setback",
+     "status": "disputed",
+     "results_read": 7,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "D04",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Trump threatens ban on UK firms building AI data centres overseas",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "D05",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Three killed and dozens missing after fire at Malaysian factory",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [
+      "BBC",
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "D06",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "French police officers acquitted for beating of music producer Michel Zecler",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "D07",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "China-bound ship still on fire after attack in Gulf of Finland",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "BBC",
+      "Reuters",
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "D08",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Photos: People rally across Spain over living costs, public services",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [],
+     "related": [
+      "NBC News",
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "D09",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "U.S. Auctions 101.5 Million Acres of Pacific Ocean to Deep Sea Mining Company",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "D10",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Wreck of First Australian-Built Warship Is Revealed 391 Years After It Sank",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "D11",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Closer EU ties will give France say on Brussels decisions, says Ed Miliband",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "D12",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Bangladesh ex-PM wins right to appeal",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [],
+     "related": [
+      "Al Jazeera",
+      "Reuters"
+     ]
+    },
+    {
+     "id": "D13",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Israeli strike kills three in vehicle distributing aid in Beirut, witnesses say",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "NBC News",
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "I00",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Government announces free electricity for all households from next month",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I01",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "NASA confirms signal from an alien civilisation detected near a neighbouring star",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "CBC"
+     ]
+    },
+    {
+     "id": "I02",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "State Bank cuts its policy rate to 2 percent in surprise emergency meeting",
+     "status": "not_found",
+     "results_read": 11,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I03",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "WHO declares a new pandemic after a mystery virus spreads across five Asian cities",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I04",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Cricket board bans all franchise leagues for national team players with immediate effect",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I05",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Scientists confirm that drinking hot lemon water every morning cures cancer in three days",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Agence France-Presse"
+     ]
+    },
+    {
+     "id": "I06",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Parliament passes law making all university degrees free for every citizen",
+     "status": "not_found",
+     "results_read": 6,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I07",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Airline announces free lifetime tickets for anyone who shares its post on social media",
+     "status": "not_found",
+     "results_read": 3,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I08",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Major bank to close all branches nationwide by the end of the month, officials confirm",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I09",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Heavy snowfall expected in Karachi this week as temperatures drop to minus ten",
+     "status": "not_found",
+     "results_read": 6,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I10",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Mobile networks to be shut down for ten days across the country, ministry says",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "NPR"
+     ]
+    },
+    {
+     "id": "I11",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Local factory owner discovers gold worth millions buried under his workshop floor",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I12",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Court orders every school in the country to close permanently from January",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I13",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "New study proves that mobile phones switched off overnight cause serious illness",
+     "status": "not_found",
+     "results_read": 11,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I14",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Prime minister to step down tomorrow after secret meeting with army chief, sources claim",
+     "status": "not_found",
+     "results_read": 4,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I15",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Vaccine found to contain microchips that track citizens, whistleblower doctor reveals",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I16",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Petrol price to fall to fifty rupees per litre from Friday, finance ministry insiders say",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I17",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Giant asteroid will hit the earth next Tuesday, space agency scientists quietly admit",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I18",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Country to introduce a new national currency next week, replacing all existing banknotes",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "I19",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Famous cricketer announces he will join the army after retiring from all cricket",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": []
+    }
+   ]
+  },
+  "older_news": {
+   "description": "Older real and fake headlines from the project's text dataset. A news search rarely returns old news.",
+   "headlines": 60,
+   "search_failed_at_collection": 0,
+   "kinds": {
+    "authentic_old": {
+     "n": 30,
+     "corroborated": 1,
+     "disputed": 0,
+     "not_found": 29,
+     "unavailable": 0,
+     "corroborated_rate": 0.033,
+     "corroborated_95ci": [
+      0.006,
+      0.167
+     ],
+     "disputed_rate": 0.0,
+     "with_any_search_result": 26,
+     "not_found_with_related_coverage": 13
+    },
+    "fake_old": {
+     "n": 30,
+     "corroborated": 0,
+     "disputed": 0,
+     "not_found": 30,
+     "unavailable": 0,
+     "corroborated_rate": 0.0,
+     "corroborated_95ci": [
+      0.0,
+      0.114
+     ],
+     "disputed_rate": 0.0,
+     "with_any_search_result": 13,
+     "not_found_with_related_coverage": 3
+    }
+   },
+   "items": [
+    {
+     "id": "O00",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "British spy boss says cyber security as important as fighting terrorism",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O01",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "House Speaker Ryan urges Trump son to testify in Congress",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O02",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Yemen Houthis say U.S. citizen kidnapped by unknown gunmen",
+     "status": "not_found",
+     "results_read": 2,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O03",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Briton arrested at Trump rally 'wouldn't hurt a fly,' father says",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O04",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Obama's Cuba meetings will not be negotiated with Cuban government: White House",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "PBS"
+     ]
+    },
+    {
+     "id": "O05",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "U.S. Senate to hold hearing on Republican healthcare proposal",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "The Guardian",
+      "PBS"
+     ]
+    },
+    {
+     "id": "O06",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Trump administration wants Obamacare subsidy case put on hold, again",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O07",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "U.S. House passes Puerto Rico debt relief bill",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "PBS",
+      "The Wall Street Journal",
+      "The New York Times"
+     ]
+    },
+    {
+     "id": "O08",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Trump names former 'black site' prison operator CIA deputy chief",
+     "status": "not_found",
+     "results_read": 2,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O09",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Despite deaths, German military eyes recruitment bump from new reality show",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O10",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Kentucky's Republican governor calls for probe of Democratic predecessor",
+     "status": "not_found",
+     "results_read": 3,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O11",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "U.S. focus on internal issues will change world order: Germany",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O12",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Russia says Lavrov-Tillerson meeting to discuss Syria, global security",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": [
+      "BBC"
+     ]
+    },
+    {
+     "id": "O13",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Supreme Court vacancy upends presidential race",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "NPR",
+      "PBS",
+      "The New York Times"
+     ]
+    },
+    {
+     "id": "O14",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Colombia's FARC rebels keep famous acronym for new political party",
+     "status": "not_found",
+     "results_read": 9,
+     "listed_outlet_results": 8,
+     "outlets": [],
+     "related": [
+      "France 24",
+      "BBC",
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "O15",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Trump says he will get into 'great detail' on tax reform in next two weeks",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O16",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Trump administration pursues sale of F-16's to Bahrain: source",
+     "status": "not_found",
+     "results_read": 5,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O17",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "'Is this the Trump we know?' South Koreans wax sanguine after Trump visit",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O18",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Putin: Russia-U.S. ties may improve through joint fight against terror",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "PBS"
+     ]
+    },
+    {
+     "id": "O19",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Ex-head of Colorado Republicans charged with voter fraud",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [],
+     "related": [
+      "NBC News"
+     ]
+    },
+    {
+     "id": "O20",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Germany suspends training of Kurdish fighters in northern Iraq",
+     "status": "not_found",
+     "results_read": 9,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "Deutsche Welle",
+      "The Guardian"
+     ]
+    },
+    {
+     "id": "O21",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Trump says Japan would shoot North Korean missiles 'out of sky' if it bought U.S. weaponry",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [],
+     "related": [
+      "NBC News",
+      "The Japan Times",
+      "CBC"
+     ]
+    },
+    {
+     "id": "O22",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Trump says hurricane does not look good, eyes debt ceiling debate",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O23",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Defense rests in Democratic Senator Menendez's bribery trial",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": [
+      "NPR",
+      "Reuters",
+      "The New York Times"
+     ]
+    },
+    {
+     "id": "O24",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Japan's Abe calls for enforcement of sanctions against North Korea: NYT",
+     "status": "not_found",
+     "results_read": 9,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O25",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "UK's Labour pledges infrastructure nationalization, credit card cap",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O26",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Facebook to overhaul political ads after threat of U.S. regulation",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "The Washington Post"
+     ]
+    },
+    {
+     "id": "O27",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Obama expresses confidence in incoming U.N. chief Guterres",
+     "status": "corroborated",
+     "results_read": 1,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "O28",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "Zimbabwe's Mnangagwa drops education minister after public outcry",
+     "status": "not_found",
+     "results_read": 4,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "O29",
+     "kind": "authentic_old",
+     "variant": "own_counted",
+     "headline": "White House says Obama's endorsement of Clinton was no surprise to Sanders",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [],
+     "related": [
+      "Voice of America",
+      "NPR"
+     ]
+    },
+    {
+     "id": "F00",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "DOJ CONTINUES OBSESSION WITH DISCREDITING FERGUSON POLICE With This Ridiculous New Report",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F01",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Fox CEO Desperately Begs Donald Trump’s Wife And Daughter To Get Him Back In Debate (TWEET)",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F02",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Company Drops Gloria Steinem After Bullied By Pro-Lifers, Apologizes For Pushing Women’s Rights",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F03",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "23 YR-OLD “FEMALE” ANTIFA THUG Charged With Stabbing Harrisburg Police Horse In Neck With Nail [VIDEO]",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F04",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Trump Is Trying To MUZZLE His Sexual Assault Victims In The Most Ludicrous Way Imaginable",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F05",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "SENATOR JOHN MCCAIN’S Trump Dossier Hand Off…The “Go-Between” Speaks Out",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F06",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Democrats Launch Plan To Make Trump’s First Speech To Congress VERY Uncomfortable",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [],
+     "related": [
+      "The Washington Post",
+      "BBC",
+      "PBS"
+     ]
+    },
+    {
+     "id": "F07",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Trump Was So Desperate During Last Debate He Broke The Rules To Ask For Help",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F08",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "OUT OF HER MIND! Maxine Waters: ‘Sex Actions’ Allegations in Trump Dossier Are ‘Absolutely True’ [Video]",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F09",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "WATCH: Sarah Silverman Hilariously Demolishes Trump On Conan",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F10",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Former Watergate Prosecutor: Mueller Could Gag Trump On Russia",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F11",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Ann Coulter Turns On Trump Over His Immigration Flip Flop",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "NBC News",
+      "USA Today"
+     ]
+    },
+    {
+     "id": "F12",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "did you know that cinnamon can boost intelligence",
+     "status": "not_found",
+     "results_read": 11,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F13",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Trump BANS Campaign Volunteers From Talking About Him FOREVER",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F14",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "MUST WATCH: Louisiana Patriots Go Wild in Support of President Trump: USA, USA, USA! [Video]",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F15",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Anonymous Just Declared ‘TOTAL WAR’ On Trump, Threatens To Expose ‘Embarrassing Information’ (VIDEO)",
+     "status": "not_found",
+     "results_read": 2,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F16",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Spicer Claims Trump’s ‘Covfefe’ Tweet Wasn’t Misspelled And Reporters Just Laugh At Him (VIDEO)",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F17",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Ammon Bundy Just Got Sweet Justice Handed To Him By A Federal Judge (VIDEO)",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F18",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "TOMI LAHREN’S Rant Against Anti-Trump Rioters Goes VIRAL: “A Bunch Of Sore Losers Gathered Together Isn’t A Protest, It’s A Tantrum” [VIDEO]",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F19",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Trump’s Carrier Deal Falls Apart; Hundreds Of Jobs Ship Off To Mexico, 600 To Be Fired Next Month",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F20",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Trump’s Campaign BADLY Photoshopped White Model To Make Her Appear Darker (IMAGES)",
+     "status": "not_found",
+     "results_read": 2,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F21",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "MSNBC “Equal Rights” Lawyer: Trump Women “Have Smaller Minds than his Small Hands” [Video]",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F22",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "jeb! Bush Has Discovered The Secret To What America Really Wants In A President…And It’s Something You Never Expected",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F23",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Democratic Rep.: Trump’s Intelligence Briefing Won’t Be Anything Important (VIDEO)",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F24",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "LAW ENFORCEMENT ON HIGH ALERT Following Threats Against Cops And Whites On 9-11By #BlackLivesMatter And #FYF911 Terrorists [VIDEO]",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F25",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "This Sarah Huckabee Sanders Tweet About Attacking The FBI Hasn’t Aged Well",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F26",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Why Trump Kicked This Writer Off His Golf Course",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "The Washington Post"
+     ]
+    },
+    {
+     "id": "F27",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "LOL! Comedian Joe Piscopo Warns Statue Haters: Leave Christopher Columbus Alone! [Video]",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F28",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "HUNGARIANS FIND SHOCKING VIDEOS On Phones Left Behind By Muslim Migrants",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "F29",
+     "kind": "fake_old",
+     "variant": "own_counted",
+     "headline": "Comedian Margaret Cho Compares Donald Trump To Roman Emperor Nero",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    }
+   ]
+  },
+  "heldout": {
+   "description": "A fresh set collected after the rules were fixed. Not used to choose any threshold.",
+   "headlines": 63,
+   "search_failed_at_collection": 0,
+   "kinds": {
+    "authentic": {
+     "n": 42,
+     "corroborated": 31,
+     "disputed": 0,
+     "not_found": 10,
+     "unavailable": 0,
+     "corroborated_rate": 0.738,
+     "corroborated_95ci": [
+      0.589,
+      0.847
+     ],
+     "disputed_rate": 0.0,
+     "with_any_search_result": 41,
+     "not_found_with_related_coverage": 4
+    },
+    "authentic (own outlet excluded)": {
+     "n": 42,
+     "corroborated": 5,
+     "disputed": 0,
+     "not_found": 36,
+     "unavailable": 0,
+     "corroborated_rate": 0.119,
+     "corroborated_95ci": [
+      0.052,
+      0.25
+     ],
+     "disputed_rate": 0.0,
+     "with_any_search_result": 41,
+     "not_found_with_related_coverage": 14
+    },
+    "distorted": {
+     "n": 9,
+     "corroborated": 0,
+     "disputed": 4,
+     "not_found": 5,
+     "unavailable": 0,
+     "corroborated_rate": 0.0,
+     "corroborated_95ci": [
+      0.0,
+      0.299
+     ],
+     "disputed_rate": 0.444,
+     "with_any_search_result": 8,
+     "not_found_with_related_coverage": 1
+    },
+    "invented": {
+     "n": 12,
+     "corroborated": 0,
+     "disputed": 0,
+     "not_found": 12,
+     "unavailable": 0,
+     "corroborated_rate": 0.0,
+     "corroborated_95ci": [
+      0.0,
+      0.243
+     ],
+     "disputed_rate": 0.0,
+     "with_any_search_result": 7,
+     "not_found_with_related_coverage": 1
+    }
+   },
+   "items": [
+    {
+     "id": "H00",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Oman to supply petroleum products, $200m credit facility to PSO under new agreement",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H00",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Oman to supply petroleum products, $200m credit facility to PSO under new agreement",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H01",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "PTI MNAs demand to know whereabouts of party leaders detained in KP, seek their court production",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 12,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H01",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "PTI MNAs demand to know whereabouts of party leaders detained in KP, seek their court production",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H02",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Lahore once again ranks as world's most polluted major city as AQI crosses 500",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H02",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Lahore once again ranks as world's most polluted major city as AQI crosses 500",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H03",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Portuguese foreign minister arrives in Pakistan for official visit: FO",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 11,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H03",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Portuguese foreign minister arrives in Pakistan for official visit: FO",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H04",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Pakistani among two injured in Iranian attacks, Bahrain says",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H04",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Pakistani among two injured in Iranian attacks, Bahrain says",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H05",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Rice exports up by 0.35m tonnes in four months",
+     "status": "corroborated",
+     "results_read": 1,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H05",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Rice exports up by 0.35m tonnes in four months",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H06",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 12,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H06",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H07",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Nigerian youth have shown their power in the past - why aren't they shaping this election?",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H07",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Nigerian youth have shown their power in the past - why aren't they shaping this election?",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H08",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Tech stock sell-off drags markets down as Anthropic shares slide",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [
+      "BBC",
+      "The Wall Street Journal",
+      "France 24"
+     ],
+     "related": []
+    },
+    {
+     "id": "H08",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Tech stock sell-off drags markets down as Anthropic shares slide",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "The Wall Street Journal",
+      "France 24"
+     ],
+     "related": []
+    },
+    {
+     "id": "H09",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H09",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Fox News",
+      "Al Jazeera",
+      "France 24"
+     ]
+    },
+    {
+     "id": "H10",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 12,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H10",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H11",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Russia-bound ship towed away after it was attacked in Gulf of Finland",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H11",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Russia-bound ship towed away after it was attacked in Gulf of Finland",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "France 24",
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "H12",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Indonesian police remove 24 body bags from factory fire site",
+     "status": "corroborated",
+     "results_read": 8,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H12",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Indonesian police remove 24 body bags from factory fire site",
+     "status": "not_found",
+     "results_read": 8,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "Dawn"
+     ]
+    },
+    {
+     "id": "H13",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Lion on the loose in Turkiye sparks fear among residents",
+     "status": "corroborated",
+     "results_read": 4,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H13",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Lion on the loose in Turkiye sparks fear among residents",
+     "status": "not_found",
+     "results_read": 4,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H14",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "WHO chief calls for peace amid heavy fighting in Ebola-hit DR Congo region",
+     "status": "corroborated",
+     "results_read": 11,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H14",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "WHO chief calls for peace amid heavy fighting in Ebola-hit DR Congo region",
+     "status": "not_found",
+     "results_read": 11,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H15",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "US intelligence chief defends Trump’s comments calling Putin his ‘friend’",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Al Jazeera",
+      "Hindustan Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H15",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "US intelligence chief defends Trump’s comments calling Putin his ‘friend’",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "Hindustan Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H16",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Belgium’s airports set to shut down due to anti-austerity strike",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H16",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Belgium’s airports set to shut down due to anti-austerity strike",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "BBC"
+     ]
+    },
+    {
+     "id": "H17",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Democrats win largest House majority since 1992 with North Carolina seat",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 10,
+     "outlets": [
+      "BBC",
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H17",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Democrats win largest House majority since 1992 with North Carolina seat",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H18",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Inside a Rohingya Camp After a Genocide Ruling",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H18",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Inside a Rohingya Camp After a Genocide Ruling",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": [
+      "Al Jazeera",
+      "Reuters",
+      "The Guardian"
+     ]
+    },
+    {
+     "id": "H19",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "After Bridge Attack, Putin Says He Will ‘Not Be Negotiating’ Ukraine Cease-Fire",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H19",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "After Bridge Attack, Putin Says He Will ‘Not Be Negotiating’ Ukraine Cease-Fire",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "CBS News"
+     ]
+    },
+    {
+     "id": "H20",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Drones, Texts and Diversions: How Mexico Captured a Most Wanted Man",
+     "status": "corroborated",
+     "results_read": 7,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H20",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Drones, Texts and Diversions: How Mexico Captured a Most Wanted Man",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H21",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "In a Rohingya Refugee Camp, Jubilation but Also Apprehension",
+     "status": "corroborated",
+     "results_read": 1,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H21",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "In a Rohingya Refugee Camp, Jubilation but Also Apprehension",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H22",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Turkey’s Van Cats Contend With Rising Temperatures",
+     "status": "not_found",
+     "results_read": 5,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H22",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Turkey’s Van Cats Contend With Rising Temperatures",
+     "status": "not_found",
+     "results_read": 5,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H23",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Gen Z Is Driving Global Political Change, Aiding Far Left and Far Right",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H23",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Gen Z Is Driving Global Political Change, Aiding Far Left and Far Right",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H24",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Abdul El-Sayed doubles down on ‘TrumpCare’ health plan, urging president to ‘get it done’",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H24",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Abdul El-Sayed doubles down on ‘TrumpCare’ health plan, urging president to ‘get it done’",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "The Washington Post",
+      "Fox News"
+     ]
+    },
+    {
+     "id": "H25",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "US army to blow up bomb-making chemicals despite safety concerns",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Guardian",
+      "Associated Press"
+     ],
+     "related": []
+    },
+    {
+     "id": "H25",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "US army to blow up bomb-making chemicals despite safety concerns",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "Associated Press"
+     ],
+     "related": []
+    },
+    {
+     "id": "H26",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Fire at confectionery factory in Indonesia leaves at least three dead and dozens missing",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H26",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Fire at confectionery factory in Indonesia leaves at least three dead and dozens missing",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Deutsche Welle",
+      "BBC",
+      "France 24"
+     ]
+    },
+    {
+     "id": "H27",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Jensen Huang’s reported affair was ‘most expensive sex since Helen of Troy’, US senator says",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H27",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Jensen Huang’s reported affair was ‘most expensive sex since Helen of Troy’, US senator says",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H28",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Russian warship sinks in Benghazi after suspected Ukrainian drone attack",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "France 24",
+      "Fox News"
+     ]
+    },
+    {
+     "id": "H28",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Russian warship sinks in Benghazi after suspected Ukrainian drone attack",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "France 24",
+      "Fox News"
+     ]
+    },
+    {
+     "id": "H29",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Manchester’s Co-op Live arena evacuated after apparent tear gas incident at Don Toliver concert",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H29",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Manchester’s Co-op Live arena evacuated after apparent tear gas incident at Don Toliver concert",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "BBC",
+      "Sky",
+      "The Telegraph"
+     ]
+    },
+    {
+     "id": "H30",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Portuguese FM arrives for inaugural Pakistan-Portugal Business Forum: FO",
+     "status": "corroborated",
+     "results_read": 10,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "The Express Tribune"
+     ],
+     "related": []
+    },
+    {
+     "id": "H30",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Portuguese FM arrives for inaugural Pakistan-Portugal Business Forum: FO",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "Geo News"
+     ]
+    },
+    {
+     "id": "H31",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "COP31 ends without overarching deal",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H31",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "COP31 ends without overarching deal",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H32",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Two wounded in Iranian attack on Bahrain, including Pakistani citizen",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H32",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Two wounded in Iranian attack on Bahrain, including Pakistani citizen",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H33",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Two wounded in Iranian attack on Bahrain, including Pakistani citizen",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H33",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Two wounded in Iranian attack on Bahrain, including Pakistani citizen",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H34",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "South Korean education minister offers to resign amid AI-assisted cheating controversy",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "The Hindu",
+      "BBC",
+      "The Guardian"
+     ]
+    },
+    {
+     "id": "H34",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "South Korean education minister offers to resign amid AI-assisted cheating controversy",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "The Hindu",
+      "BBC",
+      "The Guardian"
+     ]
+    },
+    {
+     "id": "H35",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "We have to keep Netanyahu 'a little bit sane', says Trump",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H35",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "We have to keep Netanyahu 'a little bit sane', says Trump",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H36",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO, says NYT",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "H36",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO, says NYT",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "H37",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Russia dusts off its pre-war demands as the U.S. raises discussing European security at Ukraine talks",
+     "status": "not_found",
+     "results_read": 4,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "Associated Press"
+     ]
+    },
+    {
+     "id": "H37",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Russia dusts off its pre-war demands as the U.S. raises discussing European security at Ukraine talks",
+     "status": "not_found",
+     "results_read": 4,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "Associated Press"
+     ]
+    },
+    {
+     "id": "H38",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Fire at Indonesian candy factory leaves 3 dead, dozens unaccounted for",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "Associated Press"
+     ]
+    },
+    {
+     "id": "H38",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Fire at Indonesian candy factory leaves 3 dead, dozens unaccounted for",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "Associated Press"
+     ]
+    },
+    {
+     "id": "H39",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Indian-origin man detained in Texas after serving sentence for visual recording conviction",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "H39",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Indian-origin man detained in Texas after serving sentence for visual recording conviction",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H40",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "News in Frames | Living with the wounds of displacement",
+     "status": "skipped",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H40",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "News in Frames | Living with the wounds of displacement",
+     "status": "skipped",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H41",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Sri Lanka's organised crime bill gets Supreme Court nod",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 12,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "H41",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Sri Lanka's organised crime bill gets Supreme Court nod",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 10,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD00",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Lahore once again ranks as world's most polluted major city as AQI crosses 1507",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD01",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Portuguese foreign minister arrives in India for official visit: FO",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 10,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD02",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Rice exports up by 735m tonnes in four months",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD03",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Denmark accuses China of plotting to assassinate US-Ukrainian rapper",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD04",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "China-bound ship towed away after it was attacked in Gulf of Finland",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD05",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Indonesian police remove 79 body bags from factory fire site",
+     "status": "not_found",
+     "results_read": 2,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD06",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Portuguese FM arrives for inaugural India-Portugal Business Forum: FO",
+     "status": "not_found",
+     "results_read": 9,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Geo News",
+      "The Express Tribune"
+     ]
+    },
+    {
+     "id": "HD07",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "China dusts off its pre-war demands as the U.S. raises discussing European security at Ukraine talks",
+     "status": "not_found",
+     "results_read": 3,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD08",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Fire at Indonesian candy factory leaves 16 dead, dozens unaccounted for",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI00",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Government to give every household a free solar panel starting next week, ministry confirms",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI01",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Scientists announce that a daily glass of vinegar water reverses ageing within a month",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI02",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Supreme court abolishes all income tax for citizens earning under one million rupees a year",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI03",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Telecom regulator to block social media for the entire month of December, officials say",
+     "status": "not_found",
+     "results_read": 4,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Reuters"
+     ]
+    },
+    {
+     "id": "HI04",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Airline to cancel every international flight for a week after unexplained system failure, sources claim",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI05",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "National cricket team to be dissolved after board announces surprise restructuring plan",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI06",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Health ministry declares seasonal flu vaccine mandatory for all adults from Monday",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI07",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Central bank to print new fifty thousand rupee note next month, insiders reveal",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI08",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Famous actor discovers ancient treasure worth billions during a film shoot, police confirm",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI09",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "University announces that all exams are cancelled permanently and degrees will be awarded online",
+     "status": "not_found",
+     "results_read": 3,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI10",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "Heavy rain to flood the capital for a full month, meteorological department warns in secret memo",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HI11",
+     "kind": "invented",
+     "variant": "own_counted",
+     "headline": "President to resign tonight after leaked recording, unnamed aides say",
+     "status": "not_found",
+     "results_read": 2,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    }
+   ]
+  },
+  "fresh2": {
+   "description": "A third set (23 Nov 2026), larger: 12 headlines from each of seven outlets, and automatic one-word or one-number distortions of them. Collected after the rules and the 429 handling were final. Not used to choose or change anything.",
+   "headlines": 114,
+   "search_failed_at_collection": 0,
+   "kinds": {
+    "authentic": {
+     "n": 84,
+     "corroborated": 63,
+     "disputed": 1,
+     "not_found": 19,
+     "unavailable": 0,
+     "corroborated_rate": 0.75,
+     "corroborated_95ci": [
+      0.648,
+      0.83
+     ],
+     "disputed_rate": 0.012,
+     "with_any_search_result": 82,
+     "not_found_with_related_coverage": 14
+    },
+    "authentic (own outlet excluded)": {
+     "n": 84,
+     "corroborated": 14,
+     "disputed": 1,
+     "not_found": 68,
+     "unavailable": 0,
+     "corroborated_rate": 0.167,
+     "corroborated_95ci": [
+      0.102,
+      0.261
+     ],
+     "disputed_rate": 0.012,
+     "with_any_search_result": 82,
+     "not_found_with_related_coverage": 30
+    },
+    "distorted": {
+     "n": 30,
+     "corroborated": 0,
+     "disputed": 15,
+     "not_found": 15,
+     "unavailable": 0,
+     "corroborated_rate": 0.0,
+     "corroborated_95ci": [
+      0.0,
+      0.114
+     ],
+     "disputed_rate": 0.5,
+     "with_any_search_result": 28,
+     "not_found_with_related_coverage": 6
+    }
+   },
+   "items": [
+    {
+     "id": "H00",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Varma century in vain as Pakistan Shaheens down India A in Asia Cup Rising Stars clash",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "Dawn"
+     ]
+    },
+    {
+     "id": "H00",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Varma century in vain as Pakistan Shaheens down India A in Asia Cup Rising Stars clash",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H01",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Conveyor belt failure at bulk terminal disrupts coal imports",
+     "status": "corroborated",
+     "results_read": 3,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H01",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Conveyor belt failure at bulk terminal disrupts coal imports",
+     "status": "not_found",
+     "results_read": 3,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H02",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Govt moves to overhaul ‘weak’ audit system",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H02",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Govt moves to overhaul ‘weak’ audit system",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H03",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "COP31 climate talks collapse as EU and others reject deal",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "H03",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "COP31 climate talks collapse as EU and others reject deal",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "H04",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Independent media not as 'independent' as it could be: Mehdi Hasan",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H04",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Independent media not as 'independent' as it could be: Mehdi Hasan",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H05",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "India fails Gujarat pogrom survivor Bilkis Bano",
+     "status": "corroborated",
+     "results_read": 9,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H05",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "India fails Gujarat pogrom survivor Bilkis Bano",
+     "status": "not_found",
+     "results_read": 9,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "BBC"
+     ]
+    },
+    {
+     "id": "H06",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "‘Global food import bill up 1.9pc in 2026’",
+     "status": "corroborated",
+     "results_read": 10,
+     "listed_outlet_results": 9,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H06",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "‘Global food import bill up 1.9pc in 2026’",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H07",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Netanyahu and Eisenkot’s parties resume talks to form coalition govt in Israel",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Agence France-Presse",
+      "Al Jazeera",
+      "France 24"
+     ]
+    },
+    {
+     "id": "H07",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Netanyahu and Eisenkot’s parties resume talks to form coalition govt in Israel",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Agence France-Presse",
+      "Al Jazeera",
+      "France 24"
+     ]
+    },
+    {
+     "id": "H08",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Multiple Karachi routes briefly closed as political parties hold demonstration, rally",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 12,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H08",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Multiple Karachi routes briefly closed as political parties hold demonstration, rally",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H09",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Lahore ranked after Islamabad, ahead of major cities in safety perception index",
+     "status": "corroborated",
+     "results_read": 10,
+     "listed_outlet_results": 9,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H09",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Lahore ranked after Islamabad, ahead of major cities in safety perception index",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H10",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Any talks with India on terrorism must be 'evidence-based', says Musadik Malik",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H10",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Any talks with India on terrorism must be 'evidence-based', says Musadik Malik",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "Geo News"
+     ]
+    },
+    {
+     "id": "H11",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "PTV asked to disclose details of foreign trips at public expense",
+     "status": "corroborated",
+     "results_read": 7,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "H11",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "PTV asked to disclose details of foreign trips at public expense",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H12",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Longest-ever UN climate talks end with no deal as deep divisions exposed",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "Los Angeles Times",
+      "The Guardian",
+      "BBC"
+     ]
+    },
+    {
+     "id": "H12",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Longest-ever UN climate talks end with no deal as deep divisions exposed",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Los Angeles Times",
+      "The Guardian"
+     ]
+    },
+    {
+     "id": "H13",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Explosion on Russian ship at Libya port caused by suspected drone attack, officials say",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H13",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Explosion on Russian ship at Libya port caused by suspected drone attack, officials say",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "France 24"
+     ]
+    },
+    {
+     "id": "H14",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Trafalgar Square Christmas tree felled in Norway",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "BBC",
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "H14",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Trafalgar Square Christmas tree felled in Norway",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "H15",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H15",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H16",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "These dead pets were meant to be cremated - then their bodies appeared on a livestream",
+     "status": "corroborated",
+     "results_read": 6,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H16",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "These dead pets were meant to be cremated - then their bodies appeared on a livestream",
+     "status": "not_found",
+     "results_read": 6,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H17",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H17",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "NPR"
+     ]
+    },
+    {
+     "id": "H18",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H18",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H19",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Man convicted of starting Palisades fire in Los Angeles",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "PBS",
+      "NPR"
+     ],
+     "related": []
+    },
+    {
+     "id": "H19",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Man convicted of starting Palisades fire in Los Angeles",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "PBS",
+      "NPR"
+     ],
+     "related": []
+    },
+    {
+     "id": "H20",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Lock of former US President George Washington's hair sells for $4,000",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "CBS News"
+     ]
+    },
+    {
+     "id": "H20",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Lock of former US President George Washington's hair sells for $4,000",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "CBS News"
+     ]
+    },
+    {
+     "id": "H21",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Miami or Vice City? Tour the real-world inspiration for GTA 6",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "H21",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Miami or Vice City? Tour the real-world inspiration for GTA 6",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H22",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Deal with EU not dependent on tuition fees agreement, Miliband says",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "BBC",
+      "The Telegraph"
+     ],
+     "related": []
+    },
+    {
+     "id": "H22",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Deal with EU not dependent on tuition fees agreement, Miliband says",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "The Telegraph"
+     ],
+     "related": []
+    },
+    {
+     "id": "H23",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "H23",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "H24",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Mystery of the red stream in Turkiye",
+     "status": "corroborated",
+     "results_read": 4,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H24",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Mystery of the red stream in Turkiye",
+     "status": "not_found",
+     "results_read": 4,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H25",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Pochettino’s nightmare start as Man U thrashed by Liverpool",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H25",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Pochettino’s nightmare start as Man U thrashed by Liverpool",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "The Hindu"
+     ]
+    },
+    {
+     "id": "H26",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Libya’s military says ‘fully prepared’ after Benghazi attacks",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H26",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Libya’s military says ‘fully prepared’ after Benghazi attacks",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "Reuters",
+      "The Guardian"
+     ]
+    },
+    {
+     "id": "H27",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Fire breaks out at popular tourist hotspot in Zanzibar",
+     "status": "corroborated",
+     "results_read": 7,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H27",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Fire breaks out at popular tourist hotspot in Zanzibar",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H28",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Cameroon’s ex-rebels caught between hiding and broken promises",
+     "status": "corroborated",
+     "results_read": 2,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H28",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Cameroon’s ex-rebels caught between hiding and broken promises",
+     "status": "not_found",
+     "results_read": 2,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H29",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Poland says Russia tried to assassinate Ukrainian rapper twice",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "Al Jazeera",
+      "PBS"
+     ],
+     "related": []
+    },
+    {
+     "id": "H29",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Poland says Russia tried to assassinate Ukrainian rapper twice",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "PBS"
+     ],
+     "related": []
+    },
+    {
+     "id": "H30",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Iran war live: Tankers set ablaze in Hormuz as IRGC warns of unrest threat",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H30",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Iran war live: Tankers set ablaze in Hormuz as IRGC warns of unrest threat",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H31",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Don Toliver concert chaos after ‘substance’ let off in crowd",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H31",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Don Toliver concert chaos after ‘substance’ let off in crowd",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H32",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Second ship targeted in series of naval drone attacks off Libyan coast",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H32",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Second ship targeted in series of naval drone attacks off Libyan coast",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H33",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Indonesia confirms 24 killed in candy factory fire as search continues",
+     "status": "not_found",
+     "results_read": 11,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Reuters",
+      "The Hindu",
+      "Deutsche Welle"
+     ]
+    },
+    {
+     "id": "H33",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Indonesia confirms 24 killed in candy factory fire as search continues",
+     "status": "not_found",
+     "results_read": 11,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Reuters",
+      "The Hindu",
+      "Deutsche Welle"
+     ]
+    },
+    {
+     "id": "H34",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Trump to host private dinner for largest owners of his meme coin",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H34",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Trump to host private dinner for largest owners of his meme coin",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "Financial Times"
+     ]
+    },
+    {
+     "id": "H35",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Asian stock markets tumble as AI bubble fears mount",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H35",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Asian stock markets tumble as AI bubble fears mount",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "The Wall Street Journal"
+     ]
+    },
+    {
+     "id": "H36",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "At APEC Summit, U.S., China and Russia Vow to Increase Oil Supply Amid Global Energy Transition",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "The New York Times"
+     ]
+    },
+    {
+     "id": "H36",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "At APEC Summit, U.S., China and Russia Vow to Increase Oil Supply Amid Global Energy Transition",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H37",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "A Butler School in the Netherlands Offers Entry Into a Gilded World",
+     "status": "corroborated",
+     "results_read": 3,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H37",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "A Butler School in the Netherlands Offers Entry Into a Gilded World",
+     "status": "not_found",
+     "results_read": 3,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H38",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Denmark Expels Russian Diplomat After Accusing Moscow of Planning a Hit",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "The New York Times",
+      "France 24",
+      "South China Morning Post"
+     ],
+     "related": []
+    },
+    {
+     "id": "H38",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Denmark Expels Russian Diplomat After Accusing Moscow of Planning a Hit",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "France 24",
+      "South China Morning Post"
+     ],
+     "related": []
+    },
+    {
+     "id": "H39",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Greenland Pulls Closer to the U.S. — by an Hour",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H39",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Greenland Pulls Closer to the U.S. — by an Hour",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Al Jazeera",
+      "Reuters"
+     ]
+    },
+    {
+     "id": "H40",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Who Is the Mexican Drug Kingpin Known as El Chapo Isidro?",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [
+      "The New York Times",
+      "France 24"
+     ],
+     "related": []
+    },
+    {
+     "id": "H40",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Who Is the Mexican Drug Kingpin Known as El Chapo Isidro?",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "France 24"
+     ],
+     "related": []
+    },
+    {
+     "id": "H41",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Unexpected Fallout From the Iran War",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [
+      "The New York Times",
+      "The Wall Street Journal"
+     ],
+     "related": []
+    },
+    {
+     "id": "H41",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Unexpected Fallout From the Iran War",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "The Wall Street Journal"
+     ],
+     "related": []
+    },
+    {
+     "id": "H42",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "How Homeowners Are Powering Vietnam’s E-Bike Surge",
+     "status": "corroborated",
+     "results_read": 6,
+     "listed_outlet_results": 6,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H42",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "How Homeowners Are Powering Vietnam’s E-Bike Surge",
+     "status": "not_found",
+     "results_read": 6,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H43",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Myanmar Committed Genocide Against the Rohingya, Top Global Court Finds",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [
+      "Reuters",
+      "NPR",
+      "The New York Times",
+      "BBC",
+      "Al Jazeera"
+     ],
+     "related": []
+    },
+    {
+     "id": "H43",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Myanmar Committed Genocide Against the Rohingya, Top Global Court Finds",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [
+      "Reuters",
+      "NPR",
+      "BBC",
+      "Al Jazeera",
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H44",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Britain Announces Brexit Reset Deal at E.U. Summit: What to Know",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H44",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Britain Announces Brexit Reset Deal at E.U. Summit: What to Know",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": [
+      "The Guardian"
+     ]
+    },
+    {
+     "id": "H45",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Chinese-Born Neuroscientist Is Detained by ICE While Traveling From Conference",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H45",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Chinese-Born Neuroscientist Is Detained by ICE While Traveling From Conference",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "The Guardian",
+      "South China Morning Post"
+     ]
+    },
+    {
+     "id": "H46",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Dutch and Austrian Embassies Are Damaged as Russian Drones Swarm Kyiv",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 11,
+     "outlets": [
+      "The New York Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "H46",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Dutch and Austrian Embassies Are Damaged as Russian Drones Swarm Kyiv",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H47",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "At Summit With Xi and Putin, Trump Seeks to Project Power Abroad While Sharing It at Home",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": [
+      "The New York Times",
+      "Bloomberg",
+      "PBS"
+     ]
+    },
+    {
+     "id": "H47",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "At Summit With Xi and Putin, Trump Seeks to Project Power Abroad While Sharing It at Home",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Bloomberg",
+      "PBS",
+      "Reuters"
+     ]
+    },
+    {
+     "id": "H48",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Trump threatens ‘tremendous penalties’ for US tech firms that build datacenters abroad",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H48",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Trump threatens ‘tremendous penalties’ for US tech firms that build datacenters abroad",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "Associated Press"
+     ]
+    },
+    {
+     "id": "H49",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Trump hosts third crypto gala for meme coin amid conflict of interest outcry",
+     "status": "corroborated",
+     "results_read": 10,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H49",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Trump hosts third crypto gala for meme coin amid conflict of interest outcry",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "The Washington Post",
+      "Hindustan Times"
+     ]
+    },
+    {
+     "id": "H50",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Theresa May’s blast from the past calls Tories back to their unhappy place | Peter Walker",
+     "status": "corroborated",
+     "results_read": 3,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H50",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Theresa May’s blast from the past calls Tories back to their unhappy place | Peter Walker",
+     "status": "not_found",
+     "results_read": 3,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H51",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "‘Serious error of judgment’: outrage over military AI event at Berlin arts complex",
+     "status": "corroborated",
+     "results_read": 4,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H51",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "‘Serious error of judgment’: outrage over military AI event at Berlin arts complex",
+     "status": "not_found",
+     "results_read": 4,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H52",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Manchester’s Co-op Live arena evacuated after ‘unknown substance’ released in crowd at Don Toliver concert",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "BBC"
+     ]
+    },
+    {
+     "id": "H52",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Manchester’s Co-op Live arena evacuated after ‘unknown substance’ released in crowd at Don Toliver concert",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": [
+      "BBC"
+     ]
+    },
+    {
+     "id": "H53",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Australian politics live: NSW MP Alex Greenwich drops support for Fred Nile state funeral after blowback from LGBTQ+ community",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H53",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Australian politics live: NSW MP Alex Greenwich drops support for Fred Nile state funeral after blowback from LGBTQ+ community",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H54",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Race to be next UN secretary general exposes divisions among world powers",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H54",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Race to be next UN secretary general exposes divisions among world powers",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H55",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H55",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [],
+     "related": [
+      "Al Jazeera",
+      "BBC",
+      "Reuters"
+     ]
+    },
+    {
+     "id": "H56",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Fears grow that US will put Nobel-winning judge under sanctions after Myanmar genocide ruling",
+     "status": "corroborated",
+     "results_read": 9,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H56",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Fears grow that US will put Nobel-winning judge under sanctions after Myanmar genocide ruling",
+     "status": "not_found",
+     "results_read": 9,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H57",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Love made a fool of Beau Lamarre-Condon but did not make him a murderer, defence argues",
+     "status": "corroborated",
+     "results_read": 4,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H57",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Love made a fool of Beau Lamarre-Condon but did not make him a murderer, defence argues",
+     "status": "not_found",
+     "results_read": 4,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H58",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Race to replant five South African baobabs after export blocked",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "H58",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Race to replant five South African baobabs after export blocked",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H59",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Cop31 climate talks break down as key deal rejected",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [
+      "The Guardian",
+      "ABC Australia"
+     ],
+     "related": []
+    },
+    {
+     "id": "H59",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Cop31 climate talks break down as key deal rejected",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "ABC Australia"
+     ],
+     "related": []
+    },
+    {
+     "id": "H60",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "At least 14 people missing after Russian drone hit building in Kyiv region, Zelenskiy says",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Reuters"
+     ]
+    },
+    {
+     "id": "H60",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "At least 14 people missing after Russian drone hit building in Kyiv region, Zelenskiy says",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Reuters"
+     ]
+    },
+    {
+     "id": "H61",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Centre releases Rs10b for K-P uplift package",
+     "status": "corroborated",
+     "results_read": 1,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "The Express Tribune"
+     ],
+     "related": []
+    },
+    {
+     "id": "H61",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Centre releases Rs10b for K-P uplift package",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H62",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Govt decides to end fuel subsidies after sharp decline in global oil prices",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "Reuters",
+      "BBC"
+     ]
+    },
+    {
+     "id": "H62",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Govt decides to end fuel subsidies after sharp decline in global oil prices",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "Reuters",
+      "BBC"
+     ]
+    },
+    {
+     "id": "H63",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "PTI MNAs urge PPP not to endorse emergency",
+     "status": "corroborated",
+     "results_read": 4,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Express Tribune"
+     ],
+     "related": []
+    },
+    {
+     "id": "H63",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "PTI MNAs urge PPP not to endorse emergency",
+     "status": "not_found",
+     "results_read": 4,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H64",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Japan-Europe joint probe enters Mercury's orbit",
+     "status": "corroborated",
+     "results_read": 9,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Agence France-Presse"
+     ],
+     "related": []
+    },
+    {
+     "id": "H64",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Japan-Europe joint probe enters Mercury's orbit",
+     "status": "corroborated",
+     "results_read": 9,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Agence France-Presse"
+     ],
+     "related": []
+    },
+    {
+     "id": "H65",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Child falls into open drain near construction site",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "The Indian Express",
+      "The Hindu"
+     ]
+    },
+    {
+     "id": "H65",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Child falls into open drain near construction site",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "The Indian Express",
+      "The Hindu"
+     ]
+    },
+    {
+     "id": "H66",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "States agree to UN talks aiming to regulate 'killer robots' by 2028",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Reuters",
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "H66",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "States agree to UN talks aiming to regulate 'killer robots' by 2028",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Reuters",
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "H67",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Israel, US agree to develop joint plans for possible escalation against Iran: report",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H67",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Israel, US agree to develop joint plans for possible escalation against Iran: report",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H68",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Gas crisis, LPG surge darken kitchens",
+     "status": "corroborated",
+     "results_read": 3,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "The Express Tribune"
+     ],
+     "related": []
+    },
+    {
+     "id": "H68",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Gas crisis, LPG surge darken kitchens",
+     "status": "not_found",
+     "results_read": 3,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H69",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "COP31 climate talks collapse as EU and others reject deal",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "H69",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "COP31 climate talks collapse as EU and others reject deal",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Reuters"
+     ],
+     "related": []
+    },
+    {
+     "id": "H70",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Taliban feel weight of Pakistan's pressure",
+     "status": "corroborated",
+     "results_read": 9,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Express Tribune"
+     ],
+     "related": []
+    },
+    {
+     "id": "H70",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Taliban feel weight of Pakistan's pressure",
+     "status": "not_found",
+     "results_read": 9,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Al Jazeera",
+      "France 24"
+     ]
+    },
+    {
+     "id": "H71",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Outsourced sanitation flops in 5 divisions",
+     "status": "corroborated",
+     "results_read": 1,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "The Express Tribune"
+     ],
+     "related": []
+    },
+    {
+     "id": "H71",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Outsourced sanitation flops in 5 divisions",
+     "status": "not_found",
+     "results_read": 1,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H72",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Russian attack near Ukraine’s capital strikes apartment building, killing two and wounding four others",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Los Angeles Times",
+      "NBC News",
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "H72",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Russian attack near Ukraine’s capital strikes apartment building, killing two and wounding four others",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Los Angeles Times",
+      "NBC News",
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "H73",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Nvidia faces U.S. accounting probe amid deepening turmoil: media",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H73",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Nvidia faces U.S. accounting probe amid deepening turmoil: media",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H74",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "3 killed and 1 wounded in shooting at Ohio baby shower; 1 man in custody, police say",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H74",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "3 killed and 1 wounded in shooting at Ohio baby shower; 1 man in custody, police say",
+     "status": "not_found",
+     "results_read": 10,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H75",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Democrats clinch a historic House majority of at least 258 seats, largest since 1992",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Associated Press"
+     ],
+     "related": []
+    },
+    {
+     "id": "H75",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Democrats clinch a historic House majority of at least 258 seats, largest since 1992",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "Associated Press"
+     ],
+     "related": []
+    },
+    {
+     "id": "H76",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Cargo ship bound for Russia's Kaliningrad hit by drones, Finland tightens security",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "H76",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Cargo ship bound for Russia's Kaliningrad hit by drones, Finland tightens security",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "NBC News"
+     ]
+    },
+    {
+     "id": "H77",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Democrats win U.S. Congress in midterm rout of U.S. President Donald Trump",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 10,
+     "outlets": [],
+     "related": [
+      "USA Today",
+      "The New York Times"
+     ]
+    },
+    {
+     "id": "H77",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Democrats win U.S. Congress in midterm rout of U.S. President Donald Trump",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 10,
+     "outlets": [],
+     "related": [
+      "USA Today",
+      "The New York Times"
+     ]
+    },
+    {
+     "id": "H78",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "The Shenzhen trilateral | The unlikely trio",
+     "status": "skipped",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H78",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "The Shenzhen trilateral | The unlikely trio",
+     "status": "skipped",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H79",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Netanyahu, Eisenkot parties resume talks to form Israel government",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "Al Jazeera",
+      "France 24"
+     ]
+    },
+    {
+     "id": "H79",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Netanyahu, Eisenkot parties resume talks to form Israel government",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": [
+      "Al Jazeera",
+      "France 24"
+     ]
+    },
+    {
+     "id": "H80",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "EU will ‘not endorse’ climate deal, throwing COP31 outcome into doubt",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "H80",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "EU will ‘not endorse’ climate deal, throwing COP31 outcome into doubt",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Deutsche Welle",
+      "Bloomberg",
+      "France 24"
+     ]
+    },
+    {
+     "id": "H81",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "India, Bulgaria discuss bilateral ties, IMEC, Black Sea situation",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "H81",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "India, Bulgaria discuss bilateral ties, IMEC, Black Sea situation",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H82",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Iran says allies China, Russia oppose change in nuclear doctrine",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 7,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H82",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Iran says allies China, Russia oppose change in nuclear doctrine",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "H83",
+     "kind": "authentic",
+     "variant": "own_counted",
+     "headline": "Iran wants diplomacy to end war, says Araghchi as U.S. rejects terms",
+     "status": "corroborated",
+     "results_read": 12,
+     "listed_outlet_results": 11,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "H83",
+     "kind": "authentic",
+     "variant": "own_excluded",
+     "headline": "Iran wants diplomacy to end war, says Araghchi as U.S. rejects terms",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [],
+     "related": [
+      "Reuters",
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "HD00",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Varma century in vain as India Shaheens down India A in Asia Cup Rising Stars clash",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD01",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Pakistan fails Gujarat pogrom survivor Bilkis Bano",
+     "status": "disputed",
+     "results_read": 1,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD02",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "‘Global food import bill up 109pc in 2026’",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD03",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Netanyahu and Eisenkot’s parties resume talks to form coalition govt in Egypt",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [],
+     "related": [
+      "France 24",
+      "The Hindu",
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "HD04",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Multiple Lahore routes briefly closed as political parties hold demonstration, rally",
+     "status": "disputed",
+     "results_read": 5,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD05",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Karachi ranked after Islamabad, ahead of major cities in safety perception index",
+     "status": "disputed",
+     "results_read": 5,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD06",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Any talks with Pakistan on terrorism must be 'evidence-based', says Musadik Malik",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Dawn"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD07",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Zelensky says Crimean Bridge strikes 'fair response' as he meets France's Streeting",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD08",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Boy, 28, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "BBC"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD09",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Lock of former US President George Washington's hair sells for $12007",
+     "status": "not_found",
+     "results_read": 2,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD10",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Miami or Vice City? Tour the real-world inspiration for GTA 25",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 6,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD11",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Poland says China tried to assassinate Ukrainian rapper twice",
+     "status": "disputed",
+     "results_read": 4,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "Al Jazeera",
+      "PBS"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD12",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Iraq war live: Tankers set ablaze in Hormuz as IRGC warns of unrest threat",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 8,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD13",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Indonesia confirms 79 killed in candy factory fire as search continues",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Fox News",
+      "Deutsche Welle",
+      "The Guardian"
+     ]
+    },
+    {
+     "id": "HD14",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "At APEC Summit, U.S., China and China Vow to Increase Oil Supply Amid Global Energy Transition",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "The New York Times"
+     ]
+    },
+    {
+     "id": "HD15",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Unexpected Fallout From the Iraq War",
+     "status": "not_found",
+     "results_read": 6,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "HD16",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Trump welcomes ‘tremendous penalties’ for US tech firms that build datacenters abroad",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD17",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ released in special forces raid",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [
+      "The Guardian"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD18",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "At least 49 people missing after Russian drone hit building in Kyiv region, Zelenskiy says",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 4,
+     "outlets": [],
+     "related": [
+      "Reuters"
+     ]
+    },
+    {
+     "id": "HD19",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Child rises into open drain near construction site",
+     "status": "not_found",
+     "results_read": 7,
+     "listed_outlet_results": 2,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD20",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Israel, US agree to develop joint plans for possible escalation against Iraq: report",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD21",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Taliban feel weight of India's pressure",
+     "status": "disputed",
+     "results_read": 4,
+     "listed_outlet_results": 2,
+     "outlets": [
+      "The Express Tribune"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD22",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Outsourced sanitation flops in 22 divisions",
+     "status": "not_found",
+     "results_read": 0,
+     "listed_outlet_results": 0,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD23",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "16 killed and 1 wounded in shooting at Ohio baby shower; 1 man in custody, police say",
+     "status": "disputed",
+     "results_read": 5,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "CNN"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD24",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Democrats clinch a historic House majority of at least 781 seats, largest since 1992",
+     "status": "disputed",
+     "results_read": 1,
+     "listed_outlet_results": 1,
+     "outlets": [
+      "Los Angeles Times"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD25",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Cargo ship bound for China's Kaliningrad hit by drones, Finland tightens security",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "USA Today"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD26",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Netanyahu, Eisenkot parties resume talks to form Egypt government",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 3,
+     "outlets": [],
+     "related": [
+      "France 24",
+      "Al Jazeera"
+     ]
+    },
+    {
+     "id": "HD27",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Pakistan, Bulgaria discuss bilateral ties, IMEC, Black Sea situation",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 5,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    },
+    {
+     "id": "HD28",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Iraq says allies China, Russia oppose change in nuclear doctrine",
+     "status": "not_found",
+     "results_read": 12,
+     "listed_outlet_results": 1,
+     "outlets": [],
+     "related": []
+    },
+    {
+     "id": "HD29",
+     "kind": "distorted",
+     "variant": "own_counted",
+     "headline": "Iraq wants diplomacy to end war, says Araghchi as U.S. rejects terms",
+     "status": "disputed",
+     "results_read": 12,
+     "listed_outlet_results": 9,
+     "outlets": [
+      "The Hindu"
+     ],
+     "related": []
+    }
+   ]
+  }
+ }
+}

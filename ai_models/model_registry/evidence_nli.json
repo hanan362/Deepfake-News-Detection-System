@@ -1,0 +1,39 @@
+{
+  "module": "evidence",
+  "name": "evidence_nli",
+  "version": "1.0.0",
+  "status": "pretrained",
+  "language": "en",
+  "algorithm": "Pretrained MNLI model (cross-encoder/nli-deberta-v3-small); not trained here",
+  "dataset": {
+    "name": "fever_gold_evidence",
+    "version": "validation",
+    "rows_clean": {
+      "evaluated": 1200
+    }
+  },
+  "metrics": {
+    "fever_gold": {
+      "n": 1200,
+      "forced_choice_accuracy": 0.85,
+      "at_threshold": {
+        "share_decided": 0.725,
+        "n_decided": 870,
+        "accuracy_when_decided": 0.9368,
+        "accuracy_ci95": [
+          0.9207,
+          0.9529
+        ],
+        "confusion_when_decided": {
+          "supports_correct": 310,
+          "supports_missed_as_refutes": 39,
+          "refutes_correct": 505,
+          "refutes_called_supports": 16
+        }
+      },
+      "baselines": {
+        "majority_accuracy": 0.5
+      }
+    }
+  }
+}

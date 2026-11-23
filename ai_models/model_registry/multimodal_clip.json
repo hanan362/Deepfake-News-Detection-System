@@ -1,0 +1,50 @@
+{
+  "module": "multimodal",
+  "name": "text_image_consistency",
+  "version": "1.0.0",
+  "status": "pretrained",
+  "language": "en",
+  "algorithm": "CLIP image-text cosine similarity (openai/clip-vit-base-patch32, pretrained, not trained here) with measured thresholds and a fixed fusion rule",
+  "dataset": {
+    "name": "flickr30k_test_1k",
+    "version": "test",
+    "rows_clean": {
+      "evaluated": 600
+    }
+  },
+  "calibration": {
+    "consistent_min": 0.3327,
+    "inconsistent_max": 0.2767,
+    "target_precision": 0.95
+  },
+  "metrics": {
+    "flickr": {
+      "roc_auc_held_out": {
+        "matched_vs_random_caption": 0.9953,
+        "matched_vs_hard_caption": 0.899
+      },
+      "mean_similarity": {
+        "matched": 0.3228,
+        "random_mismatch": 0.1638,
+        "hard_mismatch": 0.2558
+      },
+      "held_out_label_shares": {
+        "matched": {
+          "consistent": 0.4,
+          "inconsistent": 0.11,
+          "unclear": 0.49
+        },
+        "random_mismatch": {
+          "consistent": 0.0,
+          "inconsistent": 0.9933,
+          "unclear": 0.0067
+        },
+        "hard_mismatch": {
+          "consistent": 0.0333,
+          "inconsistent": 0.72,
+          "unclear": 0.2467
+        }
+      }
+    }
+  }
+}

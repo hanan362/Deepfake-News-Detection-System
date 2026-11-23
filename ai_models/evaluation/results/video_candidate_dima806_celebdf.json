@@ -1,0 +1,56 @@
+{
+  "model": "dima806/deepfake_vs_real_image_detection",
+  "dataset": "Celeb-DF v2 (official test list, seeded sample)",
+  "frames_per_video": 16,
+  "created_at": "2026-11-21T09:49:05.068528+00:00",
+  "seed": 42,
+  "aggregators": {
+    "mean": {
+      "dev_auc": 0.5625,
+      "test_auc": 0.3542
+    },
+    "median": {
+      "dev_auc": 0.5278,
+      "test_auc": 0.3819
+    },
+    "top_quartile_mean": {
+      "dev_auc": 0.4861,
+      "test_auc": 0.3924
+    },
+    "flagged_share": {
+      "dev_auc": 0.559,
+      "test_auc": 0.3681
+    }
+  },
+  "single_frame_baseline": {
+    "dev_auc": 0.4201,
+    "test_auc": 0.3889
+  },
+  "frame_level_auc_all": 0.4689,
+  "chosen_aggregator": "mean",
+  "calibration": {
+    "fake_min": null,
+    "real_max": null,
+    "target_precision": 0.8,
+    "chosen_on_videos": 24
+  },
+  "constant_answer_accuracy": 0.5,
+  "test_report": {
+    "n": 24,
+    "decided": 0,
+    "decided_share": 0.0,
+    "accuracy_on_decided": null,
+    "fake_calls": 0,
+    "fake_calls_correct": 0,
+    "real_calls": 0,
+    "real_calls_correct": 0
+  },
+  "n_videos_sampled": 48,
+  "n_videos_usable": 48,
+  "n_dev": 24,
+  "n_test": 24,
+  "n_test_fake": 12,
+  "n_test_real": 12,
+  "mean_face_frames_per_video": 16.0,
+  "videos_without_enough_faces": 0
+}

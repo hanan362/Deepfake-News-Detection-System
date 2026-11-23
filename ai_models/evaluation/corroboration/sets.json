@@ -1,0 +1,486 @@
+[
+ {
+  "id": "R00",
+  "kind": "authentic",
+  "headline": "Focus on public issues, avoid new fault lines: PPP",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "R01",
+  "kind": "authentic",
+  "headline": "Veteran journalist Husain Naqi passes away in Lahore",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "R02",
+  "kind": "authentic",
+  "headline": "Trump intends to secure ‘permanent deal’ with Iran",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "R03",
+  "kind": "authentic",
+  "headline": "SMOKERS’ CORNER: The Migration Paradox",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "R04",
+  "kind": "authentic",
+  "headline": "PPP, PML-N spat continues as Asif's jibe at Bilawal draws 'red line' warning",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "R05",
+  "kind": "authentic",
+  "headline": "Mutiple roads closed for traffic in Karachi ahead of demonstration, rally by political parties",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "R06",
+  "kind": "authentic",
+  "headline": "ANC fights to keep control of South Africa's key cities after election setback",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "R07",
+  "kind": "authentic",
+  "headline": "Trump threatens ban on US firms building AI data centres overseas",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "R08",
+  "kind": "authentic",
+  "headline": "Three killed and dozens missing after fire at Indonesian factory",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "R09",
+  "kind": "authentic",
+  "headline": "French police officers sentenced for beating of music producer Michel Zecler",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "R10",
+  "kind": "authentic",
+  "headline": "US declassifies more UFO footage filmed in the Middle East",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "R11",
+  "kind": "authentic",
+  "headline": "Russia-bound ship still on fire after attack in Gulf of Finland",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "R12",
+  "kind": "authentic",
+  "headline": "What Sandpapergate reveals about Australian cricket",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "R13",
+  "kind": "authentic",
+  "headline": "Photos: People rally across France over living costs, public services",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "R14",
+  "kind": "authentic",
+  "headline": "Russian ship attacked by drone in Baltic Sea off Finland",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "R15",
+  "kind": "authentic",
+  "headline": "Messi throws ball in opponent’s face, avoids red card as Inter Miami lose",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "R16",
+  "kind": "authentic",
+  "headline": "Why Somalia’s president turned against his former ally, the UAE",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "R17",
+  "kind": "authentic",
+  "headline": "COP31 climate talks on the brink as new draft deal faces scrutiny",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "R18",
+  "kind": "authentic",
+  "headline": "Taiwanese Comedian Targeted for Mocking Xi Jinping Is Drawing Sellout Crowds",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "R19",
+  "kind": "authentic",
+  "headline": "A Chinese Tech Hub Offers a Peek at the Electric Cars Headed for Canada",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "R20",
+  "kind": "authentic",
+  "headline": "Deadly Protests Erupt in Bangladesh Over Exiled Former Leader. What to Know.",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "R21",
+  "kind": "authentic",
+  "headline": "U.S. Auctions 31.5 Million Acres of Pacific Ocean to Deep Sea Mining Company",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "R22",
+  "kind": "authentic",
+  "headline": "Wreck of First Australian-Built Warship Is Revealed 128 Years After It Sank",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "R23",
+  "kind": "authentic",
+  "headline": "South Korea’s Education Minister Resigns Over Anti-A.I. Cheating Rules",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "R24",
+  "kind": "authentic",
+  "headline": "Closer EU ties will give UK say on Brussels decisions, says Ed Miliband",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "R25",
+  "kind": "authentic",
+  "headline": "Haitians excited but uneasy as El Salvador troops fight gangs",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "R26",
+  "kind": "authentic",
+  "headline": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day of trading",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "R27",
+  "kind": "authentic",
+  "headline": "Conservative media weighs its future as cracks emerge in Trump’s movement",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "R28",
+  "kind": "authentic",
+  "headline": "Arizona grandfather hailed as a hero after finding missing toddler in desert",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "R29",
+  "kind": "authentic",
+  "headline": "Theresa May ‘aghast’ at Andy Burnham’s talk about rejoining EU",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "R30",
+  "kind": "authentic",
+  "headline": "The convenient politics of an AI spy scandal",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "R31",
+  "kind": "authentic",
+  "headline": "Rahul Gandhi, Indian opposition lawmakers detained over election chief protest for second day",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "R32",
+  "kind": "authentic",
+  "headline": "Bangladesh ex-PM loses right to appeal",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "R33",
+  "kind": "authentic",
+  "headline": "Dar, Saudi FM discuss possible R4 meeting on regional developments",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "R34",
+  "kind": "authentic",
+  "headline": "Govt moves to fully digitise passport issuance system",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "R35",
+  "kind": "authentic",
+  "headline": "Saudi-led coalition says it intercepted, destroyed Houthi drone targeting Riyadh region",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "R36",
+  "kind": "authentic",
+  "headline": "Saudi-led coalition says it intercepted Houthi missile in western region",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "R37",
+  "kind": "authentic",
+  "headline": "European Union proposes tax on Big Tech to boost budget",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "R38",
+  "kind": "authentic",
+  "headline": "NIA sends request to UAE to probe any Indian footprints of copilot of flydubai flight who attacked Smit Machchhar",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "R39",
+  "kind": "authentic",
+  "headline": "COP31: Turkiye's final draft doesn't mention the words ‘fossil fuels’ that cause global warming",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "R40",
+  "kind": "authentic",
+  "headline": "Thousands march in Lisbon as living costs fuel anger",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "R41",
+  "kind": "authentic",
+  "headline": "Israeli strike kills three in vehicle distributing aid in Gaza, witnesses say",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "D00",
+  "kind": "distorted",
+  "headline": "Veteran journalist Husain Naqi passes away in Karachi",
+  "own_outlet": null,
+  "derived_from": "Veteran journalist Husain Naqi passes away in Lahore",
+  "how": "swap:Lahore"
+ },
+ {
+  "id": "D01",
+  "kind": "distorted",
+  "headline": "Trump intends to secure ‘permanent deal’ with Iraq",
+  "own_outlet": null,
+  "derived_from": "Trump intends to secure ‘permanent deal’ with Iran",
+  "how": "swap:Iran"
+ },
+ {
+  "id": "D02",
+  "kind": "distorted",
+  "headline": "Mutiple roads closed for traffic in Lahore ahead of demonstration, rally by political parties",
+  "own_outlet": null,
+  "derived_from": "Mutiple roads closed for traffic in Karachi ahead of demonstration, rally by political parties",
+  "how": "swap:Karachi"
+ },
+ {
+  "id": "D03",
+  "kind": "distorted",
+  "headline": "ANC fights to keep control of Nigeria's key cities after election setback",
+  "own_outlet": null,
+  "derived_from": "ANC fights to keep control of South Africa's key cities after election setback",
+  "how": "swap:South Africa"
+ },
+ {
+  "id": "D04",
+  "kind": "distorted",
+  "headline": "Trump threatens ban on UK firms building AI data centres overseas",
+  "own_outlet": null,
+  "derived_from": "Trump threatens ban on US firms building AI data centres overseas",
+  "how": "swap:US firms"
+ },
+ {
+  "id": "D05",
+  "kind": "distorted",
+  "headline": "Three killed and dozens missing after fire at Malaysian factory",
+  "own_outlet": null,
+  "derived_from": "Three killed and dozens missing after fire at Indonesian factory",
+  "how": "swap:Indonesian"
+ },
+ {
+  "id": "D06",
+  "kind": "distorted",
+  "headline": "French police officers acquitted for beating of music producer Michel Zecler",
+  "own_outlet": null,
+  "derived_from": "French police officers sentenced for beating of music producer Michel Zecler",
+  "how": "swap:sentenced"
+ },
+ {
+  "id": "D07",
+  "kind": "distorted",
+  "headline": "China-bound ship still on fire after attack in Gulf of Finland",
+  "own_outlet": null,
+  "derived_from": "Russia-bound ship still on fire after attack in Gulf of Finland",
+  "how": "swap:Russia"
+ },
+ {
+  "id": "D08",
+  "kind": "distorted",
+  "headline": "Photos: People rally across Spain over living costs, public services",
+  "own_outlet": null,
+  "derived_from": "Photos: People rally across France over living costs, public services",
+  "how": "swap:France"
+ },
+ {
+  "id": "D09",
+  "kind": "distorted",
+  "headline": "U.S. Auctions 101.5 Million Acres of Pacific Ocean to Deep Sea Mining Company",
+  "own_outlet": null,
+  "derived_from": "U.S. Auctions 31.5 Million Acres of Pacific Ocean to Deep Sea Mining Company",
+  "how": "number"
+ },
+ {
+  "id": "D10",
+  "kind": "distorted",
+  "headline": "Wreck of First Australian-Built Warship Is Revealed 391 Years After It Sank",
+  "own_outlet": null,
+  "derived_from": "Wreck of First Australian-Built Warship Is Revealed 128 Years After It Sank",
+  "how": "number"
+ },
+ {
+  "id": "D11",
+  "kind": "distorted",
+  "headline": "Closer EU ties will give France say on Brussels decisions, says Ed Miliband",
+  "own_outlet": null,
+  "derived_from": "Closer EU ties will give UK say on Brussels decisions, says Ed Miliband",
+  "how": "swap:UK"
+ },
+ {
+  "id": "D12",
+  "kind": "distorted",
+  "headline": "Bangladesh ex-PM wins right to appeal",
+  "own_outlet": null,
+  "derived_from": "Bangladesh ex-PM loses right to appeal",
+  "how": "swap:loses"
+ },
+ {
+  "id": "D13",
+  "kind": "distorted",
+  "headline": "Israeli strike kills three in vehicle distributing aid in Beirut, witnesses say",
+  "own_outlet": null,
+  "derived_from": "Israeli strike kills three in vehicle distributing aid in Gaza, witnesses say",
+  "how": "swap:Gaza"
+ },
+ {
+  "id": "I00",
+  "kind": "invented",
+  "headline": "Government announces free electricity for all households from next month",
+  "own_outlet": null
+ },
+ {
+  "id": "I01",
+  "kind": "invented",
+  "headline": "NASA confirms signal from an alien civilisation detected near a neighbouring star",
+  "own_outlet": null
+ },
+ {
+  "id": "I02",
+  "kind": "invented",
+  "headline": "State Bank cuts its policy rate to 2 percent in surprise emergency meeting",
+  "own_outlet": null
+ },
+ {
+  "id": "I03",
+  "kind": "invented",
+  "headline": "WHO declares a new pandemic after a mystery virus spreads across five Asian cities",
+  "own_outlet": null
+ },
+ {
+  "id": "I04",
+  "kind": "invented",
+  "headline": "Cricket board bans all franchise leagues for national team players with immediate effect",
+  "own_outlet": null
+ },
+ {
+  "id": "I05",
+  "kind": "invented",
+  "headline": "Scientists confirm that drinking hot lemon water every morning cures cancer in three days",
+  "own_outlet": null
+ },
+ {
+  "id": "I06",
+  "kind": "invented",
+  "headline": "Parliament passes law making all university degrees free for every citizen",
+  "own_outlet": null
+ },
+ {
+  "id": "I07",
+  "kind": "invented",
+  "headline": "Airline announces free lifetime tickets for anyone who shares its post on social media",
+  "own_outlet": null
+ },
+ {
+  "id": "I08",
+  "kind": "invented",
+  "headline": "Major bank to close all branches nationwide by the end of the month, officials confirm",
+  "own_outlet": null
+ },
+ {
+  "id": "I09",
+  "kind": "invented",
+  "headline": "Heavy snowfall expected in Karachi this week as temperatures drop to minus ten",
+  "own_outlet": null
+ },
+ {
+  "id": "I10",
+  "kind": "invented",
+  "headline": "Mobile networks to be shut down for ten days across the country, ministry says",
+  "own_outlet": null
+ },
+ {
+  "id": "I11",
+  "kind": "invented",
+  "headline": "Local factory owner discovers gold worth millions buried under his workshop floor",
+  "own_outlet": null
+ },
+ {
+  "id": "I12",
+  "kind": "invented",
+  "headline": "Court orders every school in the country to close permanently from January",
+  "own_outlet": null
+ },
+ {
+  "id": "I13",
+  "kind": "invented",
+  "headline": "New study proves that mobile phones switched off overnight cause serious illness",
+  "own_outlet": null
+ },
+ {
+  "id": "I14",
+  "kind": "invented",
+  "headline": "Prime minister to step down tomorrow after secret meeting with army chief, sources claim",
+  "own_outlet": null
+ },
+ {
+  "id": "I15",
+  "kind": "invented",
+  "headline": "Vaccine found to contain microchips that track citizens, whistleblower doctor reveals",
+  "own_outlet": null
+ },
+ {
+  "id": "I16",
+  "kind": "invented",
+  "headline": "Petrol price to fall to fifty rupees per litre from Friday, finance ministry insiders say",
+  "own_outlet": null
+ },
+ {
+  "id": "I17",
+  "kind": "invented",
+  "headline": "Giant asteroid will hit the earth next Tuesday, space agency scientists quietly admit",
+  "own_outlet": null
+ },
+ {
+  "id": "I18",
+  "kind": "invented",
+  "headline": "Country to introduce a new national currency next week, replacing all existing banknotes",
+  "own_outlet": null
+ },
+ {
+  "id": "I19",
+  "kind": "invented",
+  "headline": "Famous cricketer announces he will join the army after retiring from all cricket",
+  "own_outlet": null
+ }
+]

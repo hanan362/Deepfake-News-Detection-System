@@ -1,0 +1,44 @@
+{
+  "evaluated_at": "2026-11-22T11:30:59+00:00",
+  "pipeline": "baseline (before 2026-11-22)",
+  "nli_model": "typeform/distilbert-base-uncased-mnli",
+  "stance_threshold": 0.85,
+  "retrieval": "cached Wikipedia search results (see script)",
+  "sets": {
+    "SET_A (used while tuning)": {
+      "true_claims": {
+        "correct": 6,
+        "wrong": 3,
+        "mixed": 10,
+        "no_call": 1
+      },
+      "false_claims": {
+        "correct": 19,
+        "wrong": 0,
+        "mixed": 1,
+        "no_call": 0
+      },
+      "correct": 25,
+      "wrong": 3,
+      "n": 40
+    },
+    "SET_B (held out)": {
+      "true_claims": {
+        "correct": 6,
+        "wrong": 7,
+        "mixed": 5,
+        "no_call": 2
+      },
+      "false_claims": {
+        "correct": 15,
+        "wrong": 2,
+        "mixed": 1,
+        "no_call": 2
+      },
+      "correct": 21,
+      "wrong": 9,
+      "n": 40
+    }
+  },
+  "caution": "Small, developer-written sets about well-known facts. SET_A was used while tuning, SET_B was not. Not a measure of accuracy on news."
+}

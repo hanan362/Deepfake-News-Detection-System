@@ -1,0 +1,65 @@
+# Limitations
+
+Limitations are grouped by how they affect a user and by what was not verified. Each one is either shown in the interface or in `README.md`.
+
+## 1. Model limitations
+
+| # | Limitation | Consequence |
+|---|---|---|
+| L1 | The text model learned the style of one collection. On LIAR2 its accuracy is 0.552 (a constant answer gives 0.576) and its ROC AUC 0.549 | A verdict on text unlike the training articles should be ignored |
+| L2 | It does not check facts, sources or claims | A true article can be called fake and a false one real |
+| L3 | English and Urdu only. Other scripts are declined. The Urdu model was trained on one small collection and tested only on that collection's own held-out split (86.2% accuracy, ROC AUC 0.911) | Urdu results are experimental and may not carry over to other Urdu news |
+| L4 | Needs at least 60 words and at most 50,000 characters | Headlines and posts are declined |
+| L5 | The 0.80 confidence threshold was not tuned | The share of *Unverified* answers is unknown |
+| L6 | Probabilities are model scores, and are poorly calibrated outside the training distribution (ECE 0.129 on LIAR2) | They must not be read as the chance a story is false |
+| L7 | Training data provenance is undocumented. The label direction was verified, but source shortcuts may remain | In-collection scores may be inflated |
+| L8 | Machine-written text and newer events are not covered | Unknown behaviour |
+| L9 | The image module is a heuristic. Error Level Analysis responds to recompression, and nothing was validated against labelled edits | It cannot say that an image is edited, authentic or AI-generated |
+| L10 | The explanation is exact for the linear model but says nothing about truth | It must not be used as evidence |
+| L11 | Video: the classifier judges each frame alone, was trained by a third party on FaceForensics++, and was measured on small samples (ROC AUC 0.84 with a 95% interval of 0.71 to 0.95 on Google DeepFakeDetection after thresholds were set on Celeb-DF; 0.93 on held-out Celeb-DF, which is optimistic). On the other dataset about one call in five was wrong | Treat a video verdict as a weak signal. It is not tested on news footage, other generators, heavy compression or audio |
+| L12 | Video needs a clear face in at least 8 of 16 sampled frames. Small, turned or blurred faces are missed by the face detector | Such videos get *Unverified* |
+| L13 | Evidence: the stance step is 93.7% correct on the 72% of FEVER items it decides (gold evidence handed over). The whole check was measured on 80 short, well-known claims (32 of 40 right and 2 wrong on the held-out half; 21 right and 9 wrong with the earlier pipeline). Since 23 November the claim's subject is also searched on its own, so the subject's own page is read (the verdict counts did not change; two true claims became *Mixed Evidence*). Pages about neighbouring subjects are still sometimes read as contradicting, and a claim that does not start with a name gets no subject search. Wikipedia lacks recent events, and without a Google key no published fact-checks are searched | *Insufficient Evidence* and *Mixed Evidence* are common and do not mean "false". A *Contradicted* on a true statement does happen (2 of 20 true claims in the held-out set). Always open the sources |
+| L14 | Image with text: CLIP thresholds come from Flickr30k photos, not news. About 1 in 10 matching captions is flagged as a mismatch. A fixed rule, not a learned model, combines the parts | A flag means "look closer". It does not say a photo is from the event the text names |
+| L16 | Headline check: compares headlines only (never article text), against 43 hand-listed outlets, through an unofficial Google News feed that can change or stop and that answers HTTP 429 when it is asked too often (the check then retries once, pauses for a minute and says "could not be checked"). On 126 fresh real headlines (two independent sets) 75% (95% interval 66% to 81%) were found at a listed outlet; 15% (10% to 22%) when the outlet the article came from is not counted. A headline that is a paraphrase of a real report (different words, extra details) is *Not found*; related headlines of listed outlets are then listed for the reader. Real headlines older than a few weeks were found in 3% of cases. Invented headlines were never corroborated (0 of 32); of 39 automatically distorted ones none was confirmed after the names-and-numbers rule, but one was before it, and 19 were flagged as different. One real headline of 126 was wrongly flagged as different. The sets are small and the invented ones were written by the developers; no real disinformation was tested | A true story from a local or unlisted outlet, a paraphrased one, or an old one, is *Not found*, which says nothing against it. A real headline pasted over a fabricated body is corroborated by this check alone (see L18). A headline with a name spelled differently from the outlet's (Araghchi / Araqchi) is not matched. The headline is sent to Google News search |
+| L17 | A page served from a listed outlet's website is lifted to *Likely Real* (undecided reading only). It shows who published the page. No fake article from such a site was in any test, so the error rate of the rule is unknown. Opinion pieces, sponsored pages and sections that anyone can post to on a listed domain would also be lifted | It is never evidence that an article is accurate |
+| L18 | Text against headline: only the first ten sentences are read, only against the headline, English only. **With the default policy only a text about *another story* stops a *Likely Real*** (real articles: 1 of 242; texts of another story: 95%). A text about the same story with changed names or numbers (flagged 60% to 74% when the policy was strict) or saying the opposite (15 of 16 hand-written) is shown as a warning and keeps its verdict, because those results also appeared on **about one real article in seven (14%, interval 7% to 25%, on 59 new articles read only after the rules were frozen)**: a model misreading a long headline as the opposite of its text, a figure rounded differently, an ordinal, a typing slip. An earlier set gave 7%, which was optimistic because the rules had been adjusted after looking at it, and the first measurements used only the first 250 words of each article. **A text that agrees with its headline and then adds false details was flagged 0 or 1 of 16 times.** The altered and hand-written texts were made by the developers, who also wrote the rules; the samples are small | A *Likely Real* is withheld when the text is about another story; that is all. It does not say that a matching text is true, and it cannot see false details after the first sentences. On a page from a listed outlet's own website it changes nothing. The check never makes a verdict *Likely Fake*; `TEXT_MATCH_STRICT=true` makes every difference stop a *Likely Real* at the price of about one real article in seven |
+| L15 | News address: JavaScript-only and paywalled pages cannot be read. The website check uses 51 hand-listed sites and rules, and an unknown domain is never called fake | An unfamiliar site is reported as unfamiliar |
+| L19 | Technical pages and numbers are for administrators only (at the owner's request): ordinary readers are told the limits in plain words, but not the measured accuracy, the model names or the word weights | A reader cannot check for themselves how weak the text model is on other data. The plain *Limits of this result* box and the *What it cannot do* section are meant to carry the honest message. The restriction covers the `/models` and evaluation endpoints (refused on the server) and the interface. A reader's own analysis still contains the model scores and the model's statement of its limits in its API response, its PDF and its report view, because those are the reader's own record |
+
+## 2. Functional gaps
+
+| # | Gap | State |
+|---|---|---|
+| F1 | A video model that learns motion and timing, and audio analysis | Not built. The video module is frame-based |
+| F2 | Image and headline consistency on news data | Built and measured on Flickr30k only. NewsCLIPpings was not available |
+| F3 | Evidence measured on news claims, news sources, a claim-level truth verdict | Retrieval and the stance step exist and were measured end to end on 80 short factual claims (not news). No truth verdict is given |
+| F4 | A trained source-credibility model | Not built. Rule-based and list-based checks only |
+| F8 | A headline check against a keyed, documented news API and a larger outlet list | Built with an unofficial feed and a 43-outlet list. See L16 |
+| F5 | A second Urdu collection to test on | Not available. The Urdu model is experimental |
+| F6 | E-mail delivery of reset tokens | No mail service. The operator passes the token on. Development mode can return it in the response |
+| F7 | Demo mode | Not provided. There is no sample data mixed with real results |
+
+## 3. What was not verified
+
+| # | Item | Detail |
+|---|---|---|
+| V1 | Docker images and Compose | Built and run once in the development sandbox (Linux, Docker engine, PostgreSQL 16 service): all three containers healthy, migrations at start, text analysis stored in PostgreSQL, in-Docker training of the English and Urdu models, and, with `INSTALL_ML=true`, an image-text check and video checks through nginx. The sandbox needed adaptations (base images with the proxy's CA, a build proxy, a read-only copy of the host's model cache) and its containers had no outbound network, so reading a web address, the Wikipedia search and the in-container model download were not tried in Docker. Not run on Docker Desktop (Windows or macOS) |
+| V2 | PostgreSQL | The full back-end suite ran against a real PostgreSQL 16 server (embedded build) in the development container: 269 passed. The Docker Compose PostgreSQL service ran the migrations and stored an analysis in the sandbox run, but the test suite was not run against it |
+| V3 | Native Windows | The PowerShell scripts mirror the shell scripts. They were never executed: no Windows machine could be driven in this build, and a PowerShell installed in the sandbox was not allowed to run. A static test checks that the files they name exist and that brackets and quotes balance; that is all it proves. The Python packages the project needs do have Windows wheels for Python 3.14 (numpy, pandas, scikit-learn, scipy, SQLAlchemy, Pillow, torch, OpenCV, checked by downloading them) and the back-end suite passes on Python 3.14.6 under Linux. The script was then run once on the team laptop (Windows 11, Windows PowerShell 5.1, Python 3.14.6): the virtual environment, the package installation and the `.env` copy worked, and the database step was stopped by Windows application control, which blocked the unsigned compiled file `_util_cy.cp314-win_amd64.pyd` of SQLAlchemy (see the troubleshooting table in the installation manual). The project was therefore not run natively on that laptop |
+| V4 | Clean-install scripts end to end | The parts were run, the complete `setup_local.sh` and `run_all_tests.sh` sequence on a fresh machine was not |
+| V5 | A database created without migrations | `python -m app.db.migrate` adopts one that matches the models exactly and refuses one that does not (tested on SQLite). A mismatching development database must be deleted. The helper was not run against PostgreSQL |
+| V6 | Accessibility | Labels, roles, focus and contrast were designed in, and a few checks exist. No audit with a screen reader or an automated rule set was run |
+| V7 | Load and scale | Not tested. The rate limiter and cache are in memory per process, so several workers do not share limits. Video analysis is limited to two at a time per process and answers `503 BUSY` beyond that |
+| V10 | Untrusted video decoding | Videos are decoded in the server process (OpenCV's bundled FFmpeg) with limits on size, length, resolution and time. A sandboxed worker process would be safer and is not built |
+| V11 | Live websites | Wikipedia answers 429 now and then; the search retries up to three times and otherwise says so. Reading a web address was run against Wikipedia and a news site and by tests against a stand-in server. It was not run against a wide range of real sites |
+| V8 | Browsers | End-to-end tests ran in Chrome only |
+| V9 | Security review | Standard controls are tested. No external review or penetration test was done |
+
+## 4. Process limitations
+
+| Item | Note |
+|---|---|
+| Team details | The student and supervisor names, roll numbers, institution and department were supplied and are recorded. Which student owns which of the four areas of work is not recorded |
+| Licence | The MIT licence was chosen as a default and needs the team's confirmation. Datasets keep their own terms and are not redistributed |
+| Literature | 40 papers were verified from their abstracts and venue records. They were not all read in full |
+| Single environment results | Test results come from the development container, and the laptop run is reported separately |

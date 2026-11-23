@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+# Node
+node_modules/
+frontend/dist/
+# Secrets and local config
+.env
+*.pem
+# Runtime data (never commit user uploads, reports or the local database)
+storage/uploads/*
+storage/reports/*
+storage/temporary/*
+storage/*.db
+!storage/**/.gitkeep
+# Datasets and large model files are reproduced by the scripts, not committed
+datasets/raw/*
+datasets/processed/*
+!datasets/**/.gitkeep
+ai_models/checkpoints/*
+!ai_models/checkpoints/.gitkeep
+# the small MIT-licensed face detector the video module needs ships with the repository
+!ai_models/checkpoints/face_detector/
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+frontend/test-results/
+frontend/playwright-report/
+*.tsbuildinfo

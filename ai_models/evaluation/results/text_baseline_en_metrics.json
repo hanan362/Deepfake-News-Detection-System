@@ -1,0 +1,222 @@
+{
+  "model": "text_baseline_en",
+  "version": "1.0.0",
+  "trained_at": "2026-11-22T09:34:01+00:00",
+  "seed": 42,
+  "deployed_model": "logistic_regression",
+  "features": {
+    "type": "tfidf",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 60000,
+    "vocabulary_size": 60000
+  },
+  "comparison": {
+    "logistic_regression": {
+      "validation": {
+        "accuracy": 0.9749,
+        "precision_fake": 0.9696,
+        "recall_fake": 0.9756,
+        "f1_fake": 0.9726,
+        "roc_auc": 0.9957,
+        "pr_auc": 0.9944,
+        "confusion_matrix": {
+          "tn": 4279,
+          "fp": 113,
+          "fn": 90,
+          "tp": 3601
+        },
+        "n": 8083
+      },
+      "test": {
+        "accuracy": 0.9735,
+        "precision_fake": 0.968,
+        "recall_fake": 0.9752,
+        "f1_fake": 0.9716,
+        "roc_auc": 0.9954,
+        "pr_auc": 0.9943,
+        "confusion_matrix": {
+          "tn": 4209,
+          "fp": 121,
+          "fn": 93,
+          "tp": 3661
+        },
+        "n": 8084
+      },
+      "external_liar2": {
+        "accuracy": 0.5527,
+        "precision_fake": 0.595,
+        "recall_fake": 0.7007,
+        "f1_fake": 0.6435,
+        "roc_auc": 0.5485,
+        "pr_auc": 0.6195,
+        "confusion_matrix": {
+          "tn": 342,
+          "fp": 631,
+          "fn": 396,
+          "tp": 927
+        },
+        "n": 2296
+      },
+      "train_seconds": 5.5,
+      "inference_ms_per_doc": 0.004
+    },
+    "naive_bayes": {
+      "validation": {
+        "accuracy": 0.9427,
+        "precision_fake": 0.9293,
+        "recall_fake": 0.9466,
+        "f1_fake": 0.9379,
+        "roc_auc": 0.9805,
+        "pr_auc": 0.9706,
+        "confusion_matrix": {
+          "tn": 4126,
+          "fp": 266,
+          "fn": 197,
+          "tp": 3494
+        },
+        "n": 8083
+      },
+      "test": {
+        "accuracy": 0.9412,
+        "precision_fake": 0.9304,
+        "recall_fake": 0.9441,
+        "f1_fake": 0.9372,
+        "roc_auc": 0.9801,
+        "pr_auc": 0.9697,
+        "confusion_matrix": {
+          "tn": 4065,
+          "fp": 265,
+          "fn": 210,
+          "tp": 3544
+        },
+        "n": 8084
+      },
+      "external_liar2": {
+        "accuracy": 0.5832,
+        "precision_fake": 0.6391,
+        "recall_fake": 0.6357,
+        "f1_fake": 0.6374,
+        "roc_auc": 0.6047,
+        "pr_auc": 0.6615,
+        "confusion_matrix": {
+          "tn": 498,
+          "fp": 475,
+          "fn": 482,
+          "tp": 841
+        },
+        "n": 2296
+      },
+      "train_seconds": 0.2,
+      "inference_ms_per_doc": 0.006
+    },
+    "linear_svm": {
+      "validation": {
+        "accuracy": 0.9777,
+        "precision_fake": 0.972,
+        "recall_fake": 0.9794,
+        "f1_fake": 0.9757,
+        "roc_auc": 0.9966,
+        "pr_auc": 0.9953,
+        "confusion_matrix": {
+          "tn": 4288,
+          "fp": 104,
+          "fn": 76,
+          "tp": 3615
+        },
+        "n": 8083
+      },
+      "test": {
+        "accuracy": 0.9767,
+        "precision_fake": 0.9695,
+        "recall_fake": 0.9808,
+        "f1_fake": 0.9751,
+        "roc_auc": 0.9962,
+        "pr_auc": 0.9952,
+        "confusion_matrix": {
+          "tn": 4214,
+          "fp": 116,
+          "fn": 72,
+          "tp": 3682
+        },
+        "n": 8084
+      },
+      "external_liar2": {
+        "accuracy": 0.5488,
+        "precision_fake": 0.5894,
+        "recall_fake": 0.715,
+        "f1_fake": 0.6462,
+        "roc_auc": 0.5397,
+        "pr_auc": 0.6173,
+        "confusion_matrix": {
+          "tn": 314,
+          "fp": 659,
+          "fn": 377,
+          "tp": 946
+        },
+        "n": 2296
+      },
+      "train_seconds": 2.1,
+      "inference_ms_per_doc": 0.005
+    },
+    "random_forest": {
+      "validation": {
+        "accuracy": 0.9621,
+        "precision_fake": 0.9561,
+        "recall_fake": 0.9613,
+        "f1_fake": 0.9587,
+        "roc_auc": 0.9901,
+        "pr_auc": 0.9859,
+        "confusion_matrix": {
+          "tn": 4229,
+          "fp": 163,
+          "fn": 143,
+          "tp": 3548
+        },
+        "n": 8083
+      },
+      "test": {
+        "accuracy": 0.9586,
+        "precision_fake": 0.955,
+        "recall_fake": 0.9558,
+        "f1_fake": 0.9554,
+        "roc_auc": 0.9894,
+        "pr_auc": 0.9854,
+        "confusion_matrix": {
+          "tn": 4161,
+          "fp": 169,
+          "fn": 166,
+          "tp": 3588
+        },
+        "n": 8084
+      },
+      "external_liar2": {
+        "accuracy": 0.5775,
+        "precision_fake": 0.6081,
+        "recall_fake": 0.7506,
+        "f1_fake": 0.6719,
+        "roc_auc": 0.5665,
+        "pr_auc": 0.6286,
+        "confusion_matrix": {
+          "tn": 333,
+          "fp": 640,
+          "fn": 330,
+          "tp": 993
+        },
+        "n": 2296
+      },
+      "train_seconds": 54.7,
+      "inference_ms_per_doc": 0.098
+    }
+  },
+  "calibration_logistic_regression": {
+    "ece_validation": 0.0326,
+    "ece_test": 0.0301,
+    "ece_external_liar2": 0.1266,
+    "brier_test": 0.0223,
+    "brier_external_liar2": 0.2649
+  },
+  "interpretation": "'test' measures separation of this collection's own held-out articles. 'external_liar2' is a different task (short political claims judged by fact-checkers) and shows how little the baseline transfers."
+}

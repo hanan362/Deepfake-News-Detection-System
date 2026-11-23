@@ -1,0 +1,140 @@
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/instrument-sans";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Design tokens ----------
+   Paper and midnight ink, a highlighter yellow for the one thing to do on a screen, and four verdict colours.
+   The colour of a result's band is the colour of its verdict: green, red, amber, or the quiet slate of "not sure". */
+:root, [data-theme="light"] {
+  --bg: 245 246 250;     /* paper */
+  --panel: 255 255 255;
+  --raised: 235 237 245;
+  --line: 214 218 232;
+  --ink: 20 26 60;       /* midnight */
+  --ink-2: 69 76 112;
+  --ink-3: 98 105 142;
+  --primary: 255 214 10; /* highlighter: the main button */
+  --on-primary: 20 26 60;
+  --link: 52 56 200;
+  --cyan: 52 56 200;     /* the focus and "active" accent (a name kept from the first design) */
+  --violet: 91 69 214;
+  --ok: 15 122 77;
+  --warn: 138 90 0;
+  --bad: 196 38 66;
+  --rail: 20 26 60;      /* the left-hand navigation */
+  --rail-ink: 201 206 232;
+  --rail-dim: 154 161 200;
+  --band-real: 15 122 77;
+  --band-fake: 196 38 66;
+  --band-unsure: 63 69 107;
+  --band-flag: 138 90 0;
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --bg: 14 17 38;
+  --panel: 21 25 54;
+  --raised: 30 35 72;
+  --line: 48 54 96;
+  --ink: 238 240 250;
+  --ink-2: 175 181 210;
+  --ink-3: 140 147 182;
+  --primary: 255 214 10;
+  --on-primary: 20 26 60;
+  --link: 150 156 255;
+  --cyan: 150 156 255;
+  --violet: 169 155 255;
+  --ok: 52 211 153;
+  --warn: 245 183 59;
+  --bad: 251 113 133;
+  --rail: 9 11 28;
+  --rail-ink: 201 206 232;
+  --rail-dim: 154 161 200;
+  --band-real: 18 130 82;
+  --band-fake: 204 48 76;
+  --band-unsure: 61 68 122;
+  --band-flag: 150 100 10;
+  color-scheme: dark;
+}
+
+@layer base {
+  html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+    font-size: 1rem; line-height: 1.55;
+  }
+  h1, h2, h3, h4 { @apply font-display text-ink; letter-spacing: -0.025em; line-height: 1.08; font-weight: 700; }
+  h1 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); letter-spacing: -0.035em; font-weight: 750; }
+  h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+  .app-main h1 { font-size: clamp(1.8rem, 3.3vw, 2.5rem); letter-spacing: -0.03em; }
+  h3 { font-size: 1.2rem; letter-spacing: -0.015em; font-weight: 650; }
+  p { max-width: 68ch; }
+  a { @apply text-link; text-underline-offset: 3px; }
+  a:hover { text-decoration: underline; }
+  ::selection { background: rgb(var(--primary) / 0.55); color: rgb(var(--on-primary)); }
+  :focus-visible { outline: 3px solid rgb(var(--cyan)); outline-offset: 2px; border-radius: 6px; }
+  table { @apply w-full border-collapse; }
+}
+
+@layer components {
+  .panel { @apply rounded-panel border border-line bg-panel; }
+  .panel-pad { @apply p-5 sm:p-6; }
+  .hairline { @apply border-t border-line; }
+
+  /* Something under examination: the article being read, the picture being inspected. */
+  .exhibit { @apply rounded-panel border border-line bg-panel; }
+
+  /* The highlighter. Used on text the check points at, and nowhere else. */
+  .marked { background: linear-gradient(transparent 12%, rgb(var(--primary) / 0.7) 12%, rgb(var(--primary) / 0.7) 92%, transparent 92%); color: inherit; padding: 0 0.12em; border-radius: 2px; }
+  [data-theme="dark"] .marked { color: rgb(var(--on-primary)); background: rgb(var(--primary)); }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-control px-4 py-2 text-sm font-semibold transition-[background-color,box-shadow,transform] duration-150
+      disabled:cursor-not-allowed disabled:opacity-50;
+    min-height: 2.6rem;
+  }
+  .btn-primary { background: rgb(var(--primary)); color: rgb(var(--on-primary)); box-shadow: 0 2px 0 rgb(var(--on-primary) / 0.9); }
+  .btn-primary:hover:not(:disabled) { filter: brightness(1.04); transform: translateY(-1px); box-shadow: 0 3px 0 rgb(var(--on-primary) / 0.9); }
+  .btn-primary:active:not(:disabled) { transform: translateY(1px); box-shadow: 0 0 0 rgb(var(--on-primary) / 0.9); }
+  .btn-quiet { @apply border-[1.5px] border-ink/70 bg-transparent text-ink hover:bg-raised; }
+  .btn-ghost { @apply bg-transparent text-ink-2 hover:bg-raised hover:text-ink; }
+  .btn-danger { @apply border-[1.5px] border-bad/60 bg-transparent text-bad hover:bg-bad/10; }
+  .btn-sm { @apply px-3 text-[0.8125rem]; min-height: 2.1rem; }
+  .btn-lg { @apply px-6 text-base; min-height: 3.1rem; }
+
+  .field {
+    @apply w-full rounded-control border border-line bg-panel px-3 py-2 text-ink placeholder:text-ink-3
+      transition-colors focus:border-cyan focus:outline-none;
+    min-height: 2.6rem;
+  }
+  .field:focus { box-shadow: 0 0 0 3px rgb(var(--cyan) / 0.22); }
+  .field[aria-invalid="true"] { @apply border-bad; }
+  .label { @apply mb-1.5 block text-sm font-semibold text-ink; }
+  .hint { @apply mt-1.5 text-[0.8125rem] text-ink-2; }
+  .error-text { @apply mt-1.5 text-[0.8125rem] text-bad; }
+
+  .pill { @apply inline-flex whitespace-nowrap items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold; }
+  .th { @apply px-3 py-2.5 text-left text-xs font-semibold text-ink-2; }
+  .td { @apply px-3 py-3 align-middle; }
+  .row { @apply border-t border-line transition-colors hover:bg-raised/60; }
+
+  /* The verdict band: the one loud thing on a result. Its colour is the verdict's colour. */
+  .band { color: #fff; background: rgb(var(--band-unsure)); }
+  .band-real { background: rgb(var(--band-real)); }
+  .band-fake { background: rgb(var(--band-fake)); }
+  .band-unsure { background: rgb(var(--band-unsure)); }
+  .band-flag { background: rgb(var(--band-flag)); }
+  .band a { color: #fff; text-decoration: underline; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .print-doc { border: none !important; background: #fff !important; color: #000 !important; }
+}

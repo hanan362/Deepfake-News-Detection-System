@@ -1,0 +1,10 @@
+{
+  "name": "flickr30k_test_1k",
+  "source": "https://huggingface.co/datasets/nlphuji/flickr_1k_test_image_text_retrieval",
+  "paper": "Young et al., From image descriptions to visual denotations (TACL 2014)",
+  "license": "Flickr30k terms: research use only",
+  "file_sha256": "bc613eb58b1408dfc6e7a63a9907fec68a2cf0e16b40a721b3dfead5b1af0a27",
+  "rows": 1000,
+  "rows_used": 600,
+  "sampling": "600 images, seed 42, first caption of each"
+}

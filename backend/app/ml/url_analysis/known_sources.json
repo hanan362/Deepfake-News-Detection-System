@@ -1,0 +1,263 @@
+{
+ "version": "1.0",
+ "maintained_by": "project team, edited by hand",
+ "meaning": "A small directory of well-known, established news organisations and of sites that declare themselves satire. Being listed means only that the organisation is widely recognised as a news publisher (or as satire). It does NOT mean every article it publishes is accurate. Not being listed means nothing: most local and specialist outlets are not here.",
+ "not_a_rating": true,
+ "entries": [
+  {
+   "domain": "reuters.com",
+   "name": "Reuters",
+   "category": "wire_service"
+  },
+  {
+   "domain": "apnews.com",
+   "name": "Associated Press",
+   "category": "wire_service"
+  },
+  {
+   "domain": "afp.com",
+   "name": "Agence France-Presse",
+   "category": "wire_service"
+  },
+  {
+   "domain": "bbc.com",
+   "name": "BBC",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "bbc.co.uk",
+   "name": "BBC",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "dw.com",
+   "name": "Deutsche Welle",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "npr.org",
+   "name": "NPR",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "pbs.org",
+   "name": "PBS",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "aljazeera.com",
+   "name": "Al Jazeera",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "voanews.com",
+   "name": "Voice of America",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "abc.net.au",
+   "name": "ABC Australia",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "cbc.ca",
+   "name": "CBC",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "nhk.or.jp",
+   "name": "NHK",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "geo.tv",
+   "name": "Geo News",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "cnn.com",
+   "name": "CNN",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "nbcnews.com",
+   "name": "NBC News",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "cbsnews.com",
+   "name": "CBS News",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "foxnews.com",
+   "name": "Fox News",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "sky.com",
+   "name": "Sky",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "france24.com",
+   "name": "France 24",
+   "category": "broadcaster"
+  },
+  {
+   "domain": "theguardian.com",
+   "name": "The Guardian",
+   "category": "newspaper"
+  },
+  {
+   "domain": "nytimes.com",
+   "name": "The New York Times",
+   "category": "newspaper"
+  },
+  {
+   "domain": "washingtonpost.com",
+   "name": "The Washington Post",
+   "category": "newspaper"
+  },
+  {
+   "domain": "wsj.com",
+   "name": "The Wall Street Journal",
+   "category": "newspaper"
+  },
+  {
+   "domain": "ft.com",
+   "name": "Financial Times",
+   "category": "newspaper"
+  },
+  {
+   "domain": "economist.com",
+   "name": "The Economist",
+   "category": "newspaper"
+  },
+  {
+   "domain": "bloomberg.com",
+   "name": "Bloomberg",
+   "category": "newspaper"
+  },
+  {
+   "domain": "usatoday.com",
+   "name": "USA Today",
+   "category": "newspaper"
+  },
+  {
+   "domain": "latimes.com",
+   "name": "Los Angeles Times",
+   "category": "newspaper"
+  },
+  {
+   "domain": "thetimes.co.uk",
+   "name": "The Times",
+   "category": "newspaper"
+  },
+  {
+   "domain": "telegraph.co.uk",
+   "name": "The Telegraph",
+   "category": "newspaper"
+  },
+  {
+   "domain": "thehindu.com",
+   "name": "The Hindu",
+   "category": "newspaper"
+  },
+  {
+   "domain": "hindustantimes.com",
+   "name": "Hindustan Times",
+   "category": "newspaper"
+  },
+  {
+   "domain": "indianexpress.com",
+   "name": "The Indian Express",
+   "category": "newspaper"
+  },
+  {
+   "domain": "dawn.com",
+   "name": "Dawn",
+   "category": "newspaper"
+  },
+  {
+   "domain": "tribune.com.pk",
+   "name": "The Express Tribune",
+   "category": "newspaper"
+  },
+  {
+   "domain": "thenews.com.pk",
+   "name": "The News International",
+   "category": "newspaper"
+  },
+  {
+   "domain": "jang.com.pk",
+   "name": "Jang",
+   "category": "newspaper"
+  },
+  {
+   "domain": "express.pk",
+   "name": "Express (Urdu)",
+   "category": "newspaper"
+  },
+  {
+   "domain": "brecorder.com",
+   "name": "Business Recorder",
+   "category": "newspaper"
+  },
+  {
+   "domain": "independenturdu.com",
+   "name": "Independent Urdu",
+   "category": "newspaper"
+  },
+  {
+   "domain": "scmp.com",
+   "name": "South China Morning Post",
+   "category": "newspaper"
+  },
+  {
+   "domain": "japantimes.co.jp",
+   "name": "The Japan Times",
+   "category": "newspaper"
+  },
+  {
+   "domain": "theonion.com",
+   "name": "The Onion",
+   "category": "satire"
+  },
+  {
+   "domain": "babylonbee.com",
+   "name": "The Babylon Bee",
+   "category": "satire"
+  },
+  {
+   "domain": "thedailymash.co.uk",
+   "name": "The Daily Mash",
+   "category": "satire"
+  },
+  {
+   "domain": "waterfordwhispersnews.com",
+   "name": "Waterford Whispers News",
+   "category": "satire"
+  },
+  {
+   "domain": "newsthump.com",
+   "name": "NewsThump",
+   "category": "satire"
+  },
+  {
+   "domain": "clickhole.com",
+   "name": "ClickHole",
+   "category": "satire"
+  },
+  {
+   "domain": "reductress.com",
+   "name": "Reductress",
+   "category": "satire"
+  },
+  {
+   "domain": "thehardtimes.net",
+   "name": "The Hard Times",
+   "category": "satire"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+  "model": "cross-encoder/nli-deberta-v3-small",
+  "evaluated_at": "2026-11-22T11:29:42+00:00",
+  "seed": 42,
+  "what_was_measured": "Stance of a claim given FEVER's gold evidence sentences (SUPPORTS vs REFUTES). Retrieval is NOT measured.",
+  "n": 1200,
+  "per_class": {
+    "SUPPORTS": 600,
+    "REFUTES": 600
+  },
+  "stance_threshold": 0.85,
+  "forced_choice_accuracy": 0.85,
+  "at_threshold": {
+    "share_decided": 0.725,
+    "n_decided": 870,
+    "accuracy_when_decided": 0.9368,
+    "accuracy_ci95": [
+      0.9207,
+      0.9529
+    ],
+    "confusion_when_decided": {
+      "supports_correct": 310,
+      "supports_missed_as_refutes": 39,
+      "refutes_correct": 505,
+      "refutes_called_supports": 16
+    }
+  },
+  "baselines": {
+    "majority_accuracy": 0.5
+  },
+  "seconds_per_pair": 0.0645,
+  "interpretation": "With the evidence handed over, the model separates supporting from contradicting sentences well above chance, and at the 85% threshold it abstains on the rest. A real check must first FIND the evidence, which this does not test; expect far lower coverage in use. The model never sees whether the evidence is itself true."
+}

@@ -1,0 +1,11 @@
+{
+  "name": "fever_gold_evidence",
+  "version": "validation",
+  "source": "https://huggingface.co/datasets/copenlu/fever_gold_evidence",
+  "paper": "Thorne et al., FEVER: a large-scale dataset for Fact Extraction and VERification (NAACL 2018)",
+  "license": "CC BY-SA 3.0 (FEVER, built on Wikipedia)",
+  "file_sha256": "070bf0f5b9f960e66eb72f464c63ecb7ba7499d7cda6b637327e894559d8b751",
+  "rows_validation": 15935,
+  "rows_used": 1200,
+  "sampling": "600 per class, seed 42, SUPPORTS and REFUTES only"
+}

@@ -1,0 +1,41 @@
+{
+  "model": "openai/clip-vit-base-patch32",
+  "evaluated_at": "2026-11-21T09:38:45+00:00",
+  "seed": 42,
+  "what_was_measured": "Matched vs moved captions on Flickr30k test images. NOT news data; see the module docstring.",
+  "n_images": 600,
+  "calibration_half": 300,
+  "held_out_half": 300,
+  "roc_auc_held_out": {
+    "matched_vs_random_caption": 0.9953,
+    "matched_vs_hard_caption": 0.899
+  },
+  "mean_similarity": {
+    "matched": 0.3228,
+    "random_mismatch": 0.1638,
+    "hard_mismatch": 0.2558
+  },
+  "thresholds": {
+    "consistent_min": 0.3327,
+    "inconsistent_max": 0.2767,
+    "target_precision": 0.95
+  },
+  "held_out_label_shares": {
+    "matched": {
+      "consistent": 0.4,
+      "inconsistent": 0.11,
+      "unclear": 0.49
+    },
+    "random_mismatch": {
+      "consistent": 0.0,
+      "inconsistent": 0.9933,
+      "unclear": 0.0067
+    },
+    "hard_mismatch": {
+      "consistent": 0.0333,
+      "inconsistent": 0.72,
+      "unclear": 0.2467
+    }
+  },
+  "interpretation": "Similarity separates a caption written for an image from one moved to another image well above chance; the gap is smaller for captions that resemble the true one. Most pairs land in 'unclear' by design (the thresholds demand 95% precision). These are everyday photos; real news out-of-context pairs are harder and were not tested."
+}

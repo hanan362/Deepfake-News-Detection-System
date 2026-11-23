@@ -1,0 +1,398 @@
+[
+ {
+  "id": "H00",
+  "kind": "authentic",
+  "headline": "Oman to supply petroleum products, $200m credit facility to PSO under new agreement",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "H01",
+  "kind": "authentic",
+  "headline": "PTI MNAs demand to know whereabouts of party leaders detained in KP, seek their court production",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "H02",
+  "kind": "authentic",
+  "headline": "Lahore once again ranks as world's most polluted major city as AQI crosses 500",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "H03",
+  "kind": "authentic",
+  "headline": "Portuguese foreign minister arrives in Pakistan for official visit: FO",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "H04",
+  "kind": "authentic",
+  "headline": "Pakistani among two injured in Iranian attacks, Bahrain says",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "H05",
+  "kind": "authentic",
+  "headline": "Rice exports up by 0.35m tonnes in four months",
+  "own_outlet": "dawn.com"
+ },
+ {
+  "id": "H06",
+  "kind": "authentic",
+  "headline": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "H07",
+  "kind": "authentic",
+  "headline": "Nigerian youth have shown their power in the past - why aren't they shaping this election?",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "H08",
+  "kind": "authentic",
+  "headline": "Tech stock sell-off drags markets down as Anthropic shares slide",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "H09",
+  "kind": "authentic",
+  "headline": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "H10",
+  "kind": "authentic",
+  "headline": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "H11",
+  "kind": "authentic",
+  "headline": "Russia-bound ship towed away after it was attacked in Gulf of Finland",
+  "own_outlet": "bbc.com"
+ },
+ {
+  "id": "H12",
+  "kind": "authentic",
+  "headline": "Indonesian police remove 24 body bags from factory fire site",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "H13",
+  "kind": "authentic",
+  "headline": "Lion on the loose in Turkiye sparks fear among residents",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "H14",
+  "kind": "authentic",
+  "headline": "WHO chief calls for peace amid heavy fighting in Ebola-hit DR Congo region",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "H15",
+  "kind": "authentic",
+  "headline": "US intelligence chief defends Trump’s comments calling Putin his ‘friend’",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "H16",
+  "kind": "authentic",
+  "headline": "Belgium’s airports set to shut down due to anti-austerity strike",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "H17",
+  "kind": "authentic",
+  "headline": "Democrats win largest House majority since 1992 with North Carolina seat",
+  "own_outlet": "aljazeera.com"
+ },
+ {
+  "id": "H18",
+  "kind": "authentic",
+  "headline": "Inside a Rohingya Camp After a Genocide Ruling",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "H19",
+  "kind": "authentic",
+  "headline": "After Bridge Attack, Putin Says He Will ‘Not Be Negotiating’ Ukraine Cease-Fire",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "H20",
+  "kind": "authentic",
+  "headline": "Drones, Texts and Diversions: How Mexico Captured a Most Wanted Man",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "H21",
+  "kind": "authentic",
+  "headline": "In a Rohingya Refugee Camp, Jubilation but Also Apprehension",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "H22",
+  "kind": "authentic",
+  "headline": "Turkey’s Van Cats Contend With Rising Temperatures",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "H23",
+  "kind": "authentic",
+  "headline": "Gen Z Is Driving Global Political Change, Aiding Far Left and Far Right",
+  "own_outlet": "nytimes.com"
+ },
+ {
+  "id": "H24",
+  "kind": "authentic",
+  "headline": "Abdul El-Sayed doubles down on ‘TrumpCare’ health plan, urging president to ‘get it done’",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "H25",
+  "kind": "authentic",
+  "headline": "US army to blow up bomb-making chemicals despite safety concerns",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "H26",
+  "kind": "authentic",
+  "headline": "Fire at confectionery factory in Indonesia leaves at least three dead and dozens missing",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "H27",
+  "kind": "authentic",
+  "headline": "Jensen Huang’s reported affair was ‘most expensive sex since Helen of Troy’, US senator says",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "H28",
+  "kind": "authentic",
+  "headline": "Russian warship sinks in Benghazi after suspected Ukrainian drone attack",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "H29",
+  "kind": "authentic",
+  "headline": "Manchester’s Co-op Live arena evacuated after apparent tear gas incident at Don Toliver concert",
+  "own_outlet": "theguardian.com"
+ },
+ {
+  "id": "H30",
+  "kind": "authentic",
+  "headline": "Portuguese FM arrives for inaugural Pakistan-Portugal Business Forum: FO",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "H31",
+  "kind": "authentic",
+  "headline": "COP31 ends without overarching deal",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "H32",
+  "kind": "authentic",
+  "headline": "Two wounded in Iranian attack on Bahrain, including Pakistani citizen",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "H33",
+  "kind": "authentic",
+  "headline": "Two wounded in Iranian attack on Bahrain, including Pakistani citizen",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "H34",
+  "kind": "authentic",
+  "headline": "South Korean education minister offers to resign amid AI-assisted cheating controversy",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "H35",
+  "kind": "authentic",
+  "headline": "We have to keep Netanyahu 'a little bit sane', says Trump",
+  "own_outlet": "tribune.com.pk"
+ },
+ {
+  "id": "H36",
+  "kind": "authentic",
+  "headline": "Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO, says NYT",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "H37",
+  "kind": "authentic",
+  "headline": "Russia dusts off its pre-war demands as the U.S. raises discussing European security at Ukraine talks",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "H38",
+  "kind": "authentic",
+  "headline": "Fire at Indonesian candy factory leaves 3 dead, dozens unaccounted for",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "H39",
+  "kind": "authentic",
+  "headline": "Indian-origin man detained in Texas after serving sentence for visual recording conviction",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "H40",
+  "kind": "authentic",
+  "headline": "News in Frames | Living with the wounds of displacement",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "H41",
+  "kind": "authentic",
+  "headline": "Sri Lanka's organised crime bill gets Supreme Court nod",
+  "own_outlet": "thehindu.com"
+ },
+ {
+  "id": "HD00",
+  "kind": "distorted",
+  "headline": "Lahore once again ranks as world's most polluted major city as AQI crosses 1507",
+  "own_outlet": null,
+  "derived_from": "Lahore once again ranks as world's most polluted major city as AQI crosses 500",
+  "how": "number"
+ },
+ {
+  "id": "HD01",
+  "kind": "distorted",
+  "headline": "Portuguese foreign minister arrives in India for official visit: FO",
+  "own_outlet": null,
+  "derived_from": "Portuguese foreign minister arrives in Pakistan for official visit: FO",
+  "how": "swap:Pakistan"
+ },
+ {
+  "id": "HD02",
+  "kind": "distorted",
+  "headline": "Rice exports up by 735m tonnes in four months",
+  "own_outlet": null,
+  "derived_from": "Rice exports up by 0.35m tonnes in four months",
+  "how": "number"
+ },
+ {
+  "id": "HD03",
+  "kind": "distorted",
+  "headline": "Denmark accuses China of plotting to assassinate US-Ukrainian rapper",
+  "own_outlet": null,
+  "derived_from": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+  "how": "swap:Russia"
+ },
+ {
+  "id": "HD04",
+  "kind": "distorted",
+  "headline": "China-bound ship towed away after it was attacked in Gulf of Finland",
+  "own_outlet": null,
+  "derived_from": "Russia-bound ship towed away after it was attacked in Gulf of Finland",
+  "how": "swap:Russia"
+ },
+ {
+  "id": "HD05",
+  "kind": "distorted",
+  "headline": "Indonesian police remove 79 body bags from factory fire site",
+  "own_outlet": null,
+  "derived_from": "Indonesian police remove 24 body bags from factory fire site",
+  "how": "number"
+ },
+ {
+  "id": "HD06",
+  "kind": "distorted",
+  "headline": "Portuguese FM arrives for inaugural India-Portugal Business Forum: FO",
+  "own_outlet": null,
+  "derived_from": "Portuguese FM arrives for inaugural Pakistan-Portugal Business Forum: FO",
+  "how": "swap:Pakistan"
+ },
+ {
+  "id": "HD07",
+  "kind": "distorted",
+  "headline": "China dusts off its pre-war demands as the U.S. raises discussing European security at Ukraine talks",
+  "own_outlet": null,
+  "derived_from": "Russia dusts off its pre-war demands as the U.S. raises discussing European security at Ukraine talks",
+  "how": "swap:Russia"
+ },
+ {
+  "id": "HD08",
+  "kind": "distorted",
+  "headline": "Fire at Indonesian candy factory leaves 16 dead, dozens unaccounted for",
+  "own_outlet": null,
+  "derived_from": "Fire at Indonesian candy factory leaves 3 dead, dozens unaccounted for",
+  "how": "number"
+ },
+ {
+  "id": "HI00",
+  "kind": "invented",
+  "headline": "Government to give every household a free solar panel starting next week, ministry confirms",
+  "own_outlet": null
+ },
+ {
+  "id": "HI01",
+  "kind": "invented",
+  "headline": "Scientists announce that a daily glass of vinegar water reverses ageing within a month",
+  "own_outlet": null
+ },
+ {
+  "id": "HI02",
+  "kind": "invented",
+  "headline": "Supreme court abolishes all income tax for citizens earning under one million rupees a year",
+  "own_outlet": null
+ },
+ {
+  "id": "HI03",
+  "kind": "invented",
+  "headline": "Telecom regulator to block social media for the entire month of December, officials say",
+  "own_outlet": null
+ },
+ {
+  "id": "HI04",
+  "kind": "invented",
+  "headline": "Airline to cancel every international flight for a week after unexplained system failure, sources claim",
+  "own_outlet": null
+ },
+ {
+  "id": "HI05",
+  "kind": "invented",
+  "headline": "National cricket team to be dissolved after board announces surprise restructuring plan",
+  "own_outlet": null
+ },
+ {
+  "id": "HI06",
+  "kind": "invented",
+  "headline": "Health ministry declares seasonal flu vaccine mandatory for all adults from Monday",
+  "own_outlet": null
+ },
+ {
+  "id": "HI07",
+  "kind": "invented",
+  "headline": "Central bank to print new fifty thousand rupee note next month, insiders reveal",
+  "own_outlet": null
+ },
+ {
+  "id": "HI08",
+  "kind": "invented",
+  "headline": "Famous actor discovers ancient treasure worth billions during a film shoot, police confirm",
+  "own_outlet": null
+ },
+ {
+  "id": "HI09",
+  "kind": "invented",
+  "headline": "University announces that all exams are cancelled permanently and degrees will be awarded online",
+  "own_outlet": null
+ },
+ {
+  "id": "HI10",
+  "kind": "invented",
+  "headline": "Heavy rain to flood the capital for a full month, meteorological department warns in secret memo",
+  "own_outlet": null
+ },
+ {
+  "id": "HI11",
+  "kind": "invented",
+  "headline": "President to resign tonight after leaked recording, unnamed aides say",
+  "own_outlet": null
+ }
+]

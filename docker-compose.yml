@@ -1,0 +1,57 @@
+# Run everything:   cp .env.example .env   (edit SECRET_KEY and POSTGRES_PASSWORD)   then   docker compose up --build
+# Open http://localhost:8080
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-dfnd}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-dfnd}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: deployment/docker/backend.Dockerfile
+      args:
+        INSTALL_ML: ${INSTALL_ML:-false}
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ENVIRONMENT: production
+      SECRET_KEY: ${SECRET_KEY:?set SECRET_KEY in .env}
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-dfnd}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-dfnd}
+      AUTO_CREATE_TABLES: "false"
+      EXPOSE_RESET_TOKEN: "false"
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      STORAGE_DIR: /app/storage
+      CORS_ORIGINS: http://localhost:${WEB_PORT:-8080}
+    volumes:
+      - storage:/app/storage
+      # The trained text model lives here. It is not in the image, so train it once (see README) and it persists.
+      - ./ai_models:/app/ai_models
+      - ./datasets:/app/datasets
+
+  frontend:
+    build:
+      context: .
+      dockerfile: deployment/docker/frontend.Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "${WEB_PORT:-8080}:80"
+
+volumes:
+  pgdata:
+  storage:

@@ -1,0 +1,37 @@
+{
+  "name": "urdu_fake_news",
+  "version": "hf-parquet",
+  "language": "ur",
+  "created_at": "2026-11-22T10:00:14+00:00",
+  "source": "https://huggingface.co/datasets/community-datasets/urdu_fake_news",
+  "paper": "Amjad et al., Bend the Truth: A Benchmark Dataset for Fake News Detection in Urdu and Its Evaluation (J. Intelligent & Fuzzy Systems, 2020)",
+  "license": "unknown on the dataset card; used for academic research only",
+  "files": {
+    "train": {
+      "sha256": "b1fdfb8d0f06873f64d42a9ad1db896daf9e41a431b8176019c19df6316acb19",
+      "bytes": 813386
+    },
+    "test": {
+      "sha256": "2337bbb1161129674e3dbd1a48888c4402c512c77356c643d32d92dcdd2f20ba",
+      "bytes": 374535
+    }
+  },
+  "rows_raw": {
+    "train": 638,
+    "test": 262
+  },
+  "removed_duplicates": {
+    "train": 4,
+    "test_duplicates_or_leaks_from_train": 2
+  },
+  "rows_clean": {
+    "train": 634,
+    "test": 260
+  },
+  "pairing": {
+    "similarity_threshold": 0.5,
+    "n_groups": 400,
+    "nearest_neighbour_has_opposite_label": 0.897
+  },
+  "notes": "Five news domains. In the training split almost every Fake article has a near-identical Real partner (the nearest neighbour has the opposite label for the share given in 'pairing'), so pair-aware cross-validation was used. The test split has no such partners in the training data. There is no second Urdu collection to test against, so nothing here shows that the model works on Urdu news from other sources. Roman Urdu is not covered."
+}
