@@ -48,6 +48,8 @@ class Settings(BaseSettings):
     corroboration_enabled: bool = True
     corroboration_timeout_seconds: float = 8.0
     corroboration_rate_limit_per_minute: int = 10
+    text_match_enabled: bool = True
+    text_match_strict: bool = False
     clip_model_id: str = "openai/clip-vit-base-patch32"
     google_fact_check_api_key: str | None = None
     url_fetch_rate_limit_per_minute: int = 10
